@@ -1,4 +1,3 @@
 module.export = {
   'buildPath': 'build',
-  ''
 }

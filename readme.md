@@ -1,7 +1,11 @@
 # imwebscraping.ninja website
 
-Website for [web scraping service](http://imwebscraping.ninja)
+[web scraping service](http://imscraping.ninja)
 
-# Ideas
+# Task list
 
   + http://jschr.github.io/textillate/
+
+  - [x] deploy on divshot
+  - [ ] send order form http://docs.divshot.com/services/forms
+  - [ ] authorisation
