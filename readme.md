@@ -13,6 +13,7 @@
   - [ ] take a look https://github.com/jonikorpi/Less-Framework
   - [x] convert to less, build with gulp
   - [ ] mail forwarding
+  - [x] fill keywords and description
 
 # How To Use
 
