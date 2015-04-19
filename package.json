@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/istinspring/imscraping-ninja",
   "dependencies": {
+    "del": "^1.1.1",
     "gulp-concat": "^2.5.2",
     "gulp-expect-file": "0.0.7",
     "gulp-less": "^3.0.2",

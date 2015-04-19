@@ -6,7 +6,7 @@ var webserver = require('gulp-webserver');
 
 requireDir('./tasks');
 
-gulp.task('build', ['less', 'copy']);
+gulp.task('build', ['clean', 'less', 'copy']);
 
 gulp.task('watch', function() {
   gulp.watch('./src/styles/*.less', ['less']);
