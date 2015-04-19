@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" ng-app="app"> <![endif]-->
+<html class="no-js" lang="en" ng-app="app">
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+		<base href="/">
 		<title>I am WebScraping Ninja / Web Scraping Service</title>
 
 		<meta name="keywords" content="web scraping, data scraping, web crawling, data extractions, government open data" />
 		<meta name="description" content="Provides web scraping, api parsing and data extraction services." />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 		<link href="assets/app.min.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
@@ -33,40 +39,24 @@
 			</div>
 		</div>
 
-		<div id="wrapper-content">
-			<div id="welcome" class="container">
+		<main>
+			<div class="fadeZoom" ng-cloak ui-view></div>
+		</main>
+
+		<footer>
+			<div id="copyright">
+
 				<div class="title">
-					<h2>Data scraping from APIs and Web Sites</h2>
-					<span class="byline">
-						open data aggregation, prices comparsion, data analysis
-					</span>
+					<h2>Email us and describe your problem!</h2>
+					<span class="byline">We'll respond with estimated time and price</span>
 				</div>
 
-				<div class="content">
-					<p>
-						<strong>Web scraping</strong> also refered as "web harvesting" or "web data extraction"
-						is a technique to extract valuable information from different sources in structured format
-						for further analysis.
-
-						We're using most modern technologies to archieve this goals.
-					</p>
-
-					<a href="mailto:alex@imscraping.ninja" class="button">Contact Us<br>alex@imscraping.ninja</a>
-
-				</div>
-
+				<p>&copy; imWebScraping.Ninja . All rights reserved. | Dev by <a href="http://grablab.org/">GrabLab</a>.</p>
 			</div>
-		</div>
+		</footer>
 
-		<div id="copyright">
-
-			<div class="title">
-				<h2>Email us and describe your problem!</h2>
-				<span class="byline">We'll respond with estimated time and price</span>
-			</div>
-
-			<p>&copy; imWebScraping.Ninja . All rights reserved. | Dev by <a href="http://grablab.org/">GrabLab</a>.</p>
-		</div>
+		<script src="assets/vendors.min.js"></script>
+		<script src="assets/app.min.js"></script>
 
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -14,9 +14,11 @@
   - [x] convert to less, build with gulp
   - [x] mail forwarding
   - [x] fill keywords and description
-  - [ ] schema.org
+  - [ ] schema.org definitions
   - [ ] angular.js integrate
   - [ ] about us and technologies pages
+  - [ ] build vendors and app javascripts
+  - [ ] add simple animation
 
 # How To Use
 
