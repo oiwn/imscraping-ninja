@@ -13,27 +13,27 @@ body {
 }
 
 
-	h1, h2, h3
-	{
-		margin: 0;
-		padding: 0;
-	}
+h1, h2, h3
+{
+	margin: 0;
+	padding: 0;
+}
 
-	p, ol, ul
-	{
-		margin-top: 0;
-	}
+p, ol, ul
+{
+	margin-top: 0;
+}
 
-	ol, ul
-	{
-		padding: 0;
-		list-style: none;
-	}
+ol, ul
+{
+	padding: 0;
+	list-style: none;
+}
 
-	p
-	{
-		line-height: 180%;
-	}
+p
+{
+	line-height: 180%;
+}
 
 	strong
 	{

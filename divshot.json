@@ -1,6 +1,6 @@
 {
   "name": "imscraping-ninja",
-  "root": "src",
+  "root": "build",
   "clean_urls": true,
   "error_page": "error.html"
 }

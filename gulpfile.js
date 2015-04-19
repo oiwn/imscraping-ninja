@@ -1,18 +1,19 @@
 'use strict';
 
 var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
+var requireDir = require('require-dir');
 var webserver = require('gulp-webserver');
 
+requireDir('./tasks');
 
-gulp.task('deploy', function() {
-  return gulp.src(['./src/**/*', './src/*'])
-             .pipe(ghPages());
+gulp.task('build', ['less', 'copy']);
+
+gulp.task('watch', function() {
+  gulp.watch('./src/styles/*.less', ['less']);
 });
 
-
-gulp.task('webserver', function() {
-  gulp.src('./src')
+gulp.task('serve', ['build', 'watch'], function() {
+  gulp.src('./build')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,

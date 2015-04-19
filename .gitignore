@@ -30,3 +30,7 @@ node_modules
 # divshot
 .divshot-cache/
 .publish
+
+# my
+src/components
+build/

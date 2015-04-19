@@ -1,0 +1,139 @@
+@import "variables.less";
+@import "norm.less";
+
+body {
+  background: @body-background;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12pt;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0px auto;
+  width: 88%;
+}
+
+#header-wrapper {
+  overflow: hidden;
+  padding: 5em 0em;
+  background: @header-wrapper-background no-repeat center;
+  background-size: cover;
+}
+
+#menu {}
+
+#menu ul {
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu li a, #menu li span {
+  display: inline-block;
+  margin-left: 0.50em;
+  padding: 1em 1.5em;
+  letter-spacing: 0.20em;
+  text-decoration: none;
+  font-size: 0.90em;
+  font-weight: 600;
+  text-transform: uppercase;
+  outline: 0;
+  color: #FFF;
+}
+
+#menu li:hover a, #menu li.active a, #menu li.active span {}
+
+#menu .current_page_item a {
+  background: #ff6816;
+  border-radius: 8px;
+  color: #FFF;
+}
+
+#logo {
+  padding: 5em 0em;
+  text-align: center;
+}
+
+#logo h1 {
+  font-size: 3.5em;
+}
+
+#logo a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#logo span {
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 0.90em;
+  color: rgba(255,255,255,0.5);
+}
+
+#logo span a {
+  color: rgba(255,255,255,0.8);
+}
+
+#wrapper-content {
+  background: #EDEDED;
+}
+
+#welcome {
+  overflow: hidden;
+  padding: 8em 0em;
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+}
+
+#welcome .content {
+  padding: 0em 8em;
+}
+
+#welcome .title {
+  text-align: center;
+}
+
+#welcome .title h2 {
+  color: rgba(0,0,0,0.8);
+}
+
+#welcome a, #welcome strong {
+  color: rgba(0,0,0,0.8);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 1em 2em 1em 2em;
+  background: #ff6816;
+  border-radius: 8px;
+  letter-spacing: 0.20em;
+  line-height: 1.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#copyright {
+  overflow: hidden;
+  padding: 5em 0em;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+#copyright p {
+  letter-spacing: 0.20em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.80em;
+  color: rgba(255,255,255,0.3);
+}
+
+#copyright a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.6);
+}
