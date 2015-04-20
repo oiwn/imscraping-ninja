@@ -18,20 +18,29 @@
 		<link href="assets/app.min.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
 
-	<body>
+	<body ng-init="hide.logo=false">
 
 		<div id="header-wrapper">
 			<div id="header" class="container">
 
-				<div id="menu">
-					<ul>
-						<!--li class="current_page_item"><a href="#" accesskey="1" title="">Index</a></li-->
-						<!--li><a href="#" accesskey="2" title="">Technologies</a></li>-->
-						<!--li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
-					</ul>
-				</div>
+				<nav ng-controller="NavCtrl">
+					<div id="menu">
+						<ul>
+							<li ng-class="{current_page_item: isActive('home')}">
+								<a ui-sref="home" accesskey="1" title="Home Page" ng-click="hide.logo = false">
+									Home
+								</a>
+							</li>
+							<li ng-class="{current_page_item: isActive('about')}">
+								<a ui-sref="about" accesskey="2" title="" ng-click="hide.logo = true">
+									About</a>
+								</li>
+							<!--li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
+						</ul>
+					</div>
+				</nav>
 
-				<div id="logo">
+				<div id="logo" ng-hide="hide.logo" ng-cloak>
 					<h1><a href="#">Web Scraping Service</a></h1>
 					<span>by <a href="http://grablab.org">GrabLab</a></span>
 				</div>

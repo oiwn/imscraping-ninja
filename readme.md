@@ -15,10 +15,13 @@
   - [x] mail forwarding
   - [x] fill keywords and description
   - [ ] schema.org definitions
-  - [ ] angular.js integrate
-  - [ ] about us and technologies pages
-  - [ ] build vendors and app javascripts
-  - [ ] add simple animation
+  - [x] angular.js integration
+  - [ ] about us page
+  - [ ] technologies page
+  - [x] build vendors and app javascripts
+  - [x] add simple animation
+  - [ ] speed up first gulp run by moving all processing into memory and caching
+  - [ ] better file moving http://stackoverflow.com/questions/21546931/use-gulp-to-select-and-move-directories-and-their-files
 
 # How To Use
 
