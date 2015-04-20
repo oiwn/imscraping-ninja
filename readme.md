@@ -23,6 +23,8 @@
   - [ ] speed up first gulp run by moving all processing into memory and caching
   - [ ] better file moving http://stackoverflow.com/questions/21546931/use-gulp-to-select-and-move-directories-and-their-files
   - [x] check if webmasters crawl page correctly and fix glitches
+  - [ ] add projects
+  - [ ] disable on sourcemaps production
 
 # How To Use
 
