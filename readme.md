@@ -16,15 +16,16 @@
   - [x] fill keywords and description
   - [ ] schema.org definitions
   - [x] angular.js integration
-  - [ ] about us page
-  - [ ] technologies page
+  - [x] about us page
+  - [x] technologies page
   - [x] build vendors and app javascripts
   - [x] add simple animation
   - [ ] speed up first gulp run by moving all processing into memory and caching
   - [ ] better file moving http://stackoverflow.com/questions/21546931/use-gulp-to-select-and-move-directories-and-their-files
   - [x] check if webmasters crawl page correctly and fix glitches
   - [ ] add projects
-  - [ ] disable on sourcemaps production
+  - [ ] disable sourcemaps on production
+  - [x] add live chat
 
 # How To Use
 

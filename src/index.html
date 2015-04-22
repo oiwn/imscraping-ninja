@@ -31,10 +31,16 @@
 									Home
 								</a>
 							</li>
+							<li ng-class="{current_page_item: isActive('tech')}">
+								<a ui-sref="tech" accesskey="2" title="Tech Page" ng-click="hide.logo=true">
+									Tech
+								</a>
+							</li>
 							<li ng-class="{current_page_item: isActive('about')}">
-								<a ui-sref="about" accesskey="2" title="About Page" ng-click="hide.logo=true">
-									About</a>
-								</li>
+								<a ui-sref="about" accesskey="3" title="About Page" ng-click="hide.logo=true">
+									About
+								</a>
+							</li>
 							<!--li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
 						</ul>
 					</div>
@@ -67,6 +73,7 @@
 		<script src="assets/vendors.min.js"></script>
 		<script src="assets/app.min.js"></script>
 
+		<!--Start of GA Script-->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -75,8 +82,18 @@
 
 		ga('create', 'UA-62006263-1', 'auto');
 		ga('send', 'pageview');
-
 		</script>
+		<!--End of GA Script-->
+
+		<!--Start of Zopim Live Chat Script-->
+		<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+			$.src="//v2.zopim.com/?2xaQf31QQB3vpAukY2iI4UuRnSKIc7vQ";z.t=+new Date;$.
+			type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+		</script>
+		<!--End of Zopim Live Chat Script-->
 
 	</body>
 </html>
