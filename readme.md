@@ -26,6 +26,7 @@
   - [x] bunyan logger example https://github.com/hexojs/hexo/blob/master/lib/hexo/create_logger.js
   - [x] add logging
   - [x] remove fonts
+  - [ ] add gulp inject http://stackoverflow.com/questions/22515538/include-cdn-sources-in-gulp-inject?rq=1
 
 # How To Use
 
