@@ -1,3 +1,13 @@
+## 0.0.2
+
+- [x] better files replacement
+- [x] remove sourcemaps out of the files
+- [x] remove Error: ENOENT, chmod on site build
+- [x] favicon
+- [x] bunyan logger example https://github.com/hexojs/hexo/blob/master/lib/hexo/create_logger.js
+- [x] add logging
+- [x] remove fonts
+
 ## 0.0.1
 
 - [x] deploy on divshot
