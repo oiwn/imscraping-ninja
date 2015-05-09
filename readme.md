@@ -12,7 +12,6 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] take a look on css frameworks https://github.com/jonikorpi/Less-Framework http://purecss.io/
   - [ ] schema.org definitions
   - [ ] speed up first gulp run by moving all processing into memory and caching
-  - [ ] add projects
   - [ ] add normalize http://necolas.github.io/normalize.css/
   - [ ] add jshint checker https://www.npmjs.com/package/boilerplate-gulp-angular
   - [ ] add linter for js files
@@ -25,7 +24,6 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] add markdown? https://github.com/JSRocksHQ/harmonic
   - [ ] add less compression https://github.com/less/less-plugin-clean-css https://github.com/plus3network/gulp-less
   - [ ] badge with dependencies https://david-dm.org/
-  - [ ] reduce paddings
   - [ ] wow add it "Checks various aspects of a web page for correctness" https://www.npmjs.com/package/check-pages/
   - [ ] https://github.com/sindresorhus/gulp-changed maybe possible to reduce rendering time?
   - [ ] https://npmjs.org/package/gulp-check-unused-css/ add util
@@ -33,7 +31,16 @@ Static website in HTML/LESS/AngularJS using gulp.
 
 # How To Use
 
+Setup project environment
+
   + ```npm install```
   + ```bower install```
+
+Develop
+
+  + gulp serve
+
+Deploy  
+
   + ```gulp build```
   + ```divshot push```

@@ -14,6 +14,10 @@ wsNinja.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     url: '/tech',
     templateUrl: 'views/tech.html',
   })
+  .state('projects', {
+    url: '/projects',
+    templateUrl: 'views/projects.html',
+  })
   .state('about', {
     url: '/about',
     templateUrl: 'views/about.html',

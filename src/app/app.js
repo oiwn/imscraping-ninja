@@ -5,8 +5,12 @@ var wsNinja = angular.module('app', [
   'angular-loading-bar'
 ]);
 
-wsNinja.config(function (cfpLoadingBarProvider) {
+wsNinja.config(function(cfpLoadingBarProvider) {
   cfpLoadingBarProvider.includeSpinner = true;
+});
+
+wsNinja.config(function($locationProvider) {
+  $locationProvider.html5Mode(true);
 });
 
 wsNinja.controller('NavCtrl', function($scope, $state) {

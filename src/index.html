@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 		<base href="/">
+		<!-- <meta name="fragment" content="!"> -->
+
 		<title>I am WebScraping Ninja / Web Scraping Service</title>
 
 		<meta name="keywords" content="web scraping, data scraping, web crawling, data extractions, government open data" />
@@ -35,12 +37,16 @@
 									Tech
 								</a>
 							</li>
+							<li ng-class="{current_page_item: isActive('projects')}">
+								<a ui-sref="projects" accesskey="3" title="Projects Page" ng-click="hide.logo=true">
+									Projects
+								</a>
+							</li>
 							<li ng-class="{current_page_item: isActive('about')}">
-								<a ui-sref="about" accesskey="3" title="About Page" ng-click="hide.logo=true">
+								<a ui-sref="about" accesskey="4" title="About Page" ng-click="hide.logo=true">
 									About
 								</a>
 							</li>
-							<!--li><a href="#" accesskey="5" title="">Contact Us</a></li>-->
 						</ul>
 					</div>
 				</nav>

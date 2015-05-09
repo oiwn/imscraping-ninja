@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>http://www.imscraping.ninja</loc>
+    <loc>http://www.imscraping.ninja/#/</loc>
     <lastmod>2015-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -17,6 +17,12 @@
   <url>
     <loc>http://www.imscraping.ninja/#/about</loc>
     <lastmod>2015-05-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.imscraping.ninja/#/projects</loc>
+    <lastmod>2015-06-9</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>

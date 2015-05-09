@@ -1,3 +1,12 @@
+## 0.0.3
+
+- [x] activate prerender.io
+- [x] try angularJS html5 more
+- [x] divshot settings for the angularJS
+- [x] smaller paddings
+- [x] optimize content a bit
+- [x] add projects page
+
 ## 0.0.2
 
 - [x] better files replacement
