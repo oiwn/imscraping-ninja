@@ -49,3 +49,9 @@ gulp.task('clean:root', function(callback) {
   log.debug('Cleaning app root files (index.html, sitemap, robots etc)...', chalk.bgBlue(rootPath));
   del([rootPath], callback);
 });
+
+gulp.task('clean:content', function(callback) {
+  var contentPath = siteConfig.buildDir + '/content/*.*';
+  log.debug('Cleaning rendered content files...', chalk.bgBlue(contentPath));
+  del([contentPath], callback);
+});
