@@ -1,3 +1,23 @@
+## 0.0.5
+
+- [x] projects as a services (static rendered json files as api endpoints)
+- [x] controller to show list of all projects
+- [x] parse projects \*.md files and extract meta data
+- [x] generate projects-list.json static API endpoint
+- [x] posts as a services (static rendered json files as api endpoints)
+- [x] controller to show list of all posts
+- [x] parse posts \*.md files and extract meta data
+- [x] generate posts-list.json static API endpoint
+
+## 0.0.4
+
+- [x] add normalize
+- [x] add jshint linter https://www.npmjs.com/package/boilerplate-gulp-angular
+- [x] add jscs linter
+- [x] add linter for css files - recess
+- [x] add linter for html files - html5-lint
+- [x] add \*.yaml file with tmuxp launch config
+
 ## 0.0.3
 
 - [x] activate prerender.io
@@ -6,6 +26,7 @@
 - [x] smaller paddings
 - [x] optimize content a bit
 - [x] add projects page
+- [x] html5mode enabled
 
 ## 0.0.2
 

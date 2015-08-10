@@ -5,10 +5,8 @@ var path = require('path');
 var del = require('del');
 var gulp = require('gulp');
 var chalk = require('chalk');
-
 var siteConfig = require('./../site.config.js');
 var log = require('./../utils/createLogger.js')(siteConfig.env);
-
 
 gulp.task('clean:app:css', function(callback) {
   var appCssPath = path.join(

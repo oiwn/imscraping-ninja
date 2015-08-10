@@ -2,5 +2,6 @@
   "undef": true,
   "unused": true,
   "node": true,
-  "globalstrict": true
+  "globalstrict": true,
+  "predef": ["angular"]
 }

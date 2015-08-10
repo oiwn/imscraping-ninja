@@ -37,6 +37,11 @@
 									Tech
 								</a>
 							</li>
+							<li ng-class="{current_page_item: isActive('posts')}">
+								<a ui-sref="posts" accesskey="2" title="Posts" ng-click="hide.logo=true">
+									Blog
+								</a>
+							</li>
 							<li ng-class="{current_page_item: isActive('projects')}">
 								<a ui-sref="projects" accesskey="3" title="Projects Page" ng-click="hide.logo=true">
 									Projects
@@ -65,13 +70,15 @@
 
 		<footer>
 			<div id="copyright">
-
 				<div class="title">
 					<h2>Email us and describe your problem!</h2>
 					<span class="byline">We'll respond with estimated time and price</span>
 				</div>
 
-				<p>&copy; imWebScraping.ninja 2008-2015. All rights reserved. | Dev by <a href="http://grablab.org/">GrabLab</a>.</p>
+				<p>
+					&copy; imWebScraping.ninja 2008-2015. All rights reserved.
+					| Dev by <a href="http://grablab.org/">GrabLab</a>.
+				</p>
 			</div>
 		</footer>
 

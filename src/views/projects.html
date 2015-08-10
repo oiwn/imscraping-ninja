@@ -7,29 +7,13 @@
     <div class="content">
       <div class="content-container">
         <div class="projects-list">
-          <div class="project-item">
-            <h2>Online stores scraping</h2>
-            <p>
-              Screaped more than 10 of ecommerce websites for the site comparsion + REST API as backend with
-              AngularJS on frontend.
-            </p>
-          </div>
-          <div class="project-item">
-            <h2>Extract forex signals</h2>
-            <p>
-              Forex historical data and signals from varisou source
-            </p>
-          </div>
-          <div class="project-item">
-            <h2>Open government data processing</h2>
-            <p>
-              Extract valuable information from open government data by combining sources to generate "facts"
-              used in business decisions.
-            </p>
+          <div class="project-item" ng-repeat="project in projects">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
           </div>
         </div>
       </div>
     </div>
-
+    
   </div>
 </div>

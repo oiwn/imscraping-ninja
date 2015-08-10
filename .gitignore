@@ -34,3 +34,5 @@ node_modules
 # my
 src/components
 build/
+content/
+imscrapingninja.yaml
