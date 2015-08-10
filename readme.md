@@ -22,6 +22,7 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   - [ ] check if gulp executiong tasks in parallel
   - [ ] speed up build process
+  - [ ] backup content to the Dropbox
 
 # Features list
 

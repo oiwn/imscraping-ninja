@@ -8,6 +8,7 @@
 - [x] controller to show list of all posts
 - [x] parse posts \*.md files and extract meta data
 - [x] generate posts-list.json static API endpoint
+- [x] render site gulp task (with content)
 
 ## 0.0.4
 

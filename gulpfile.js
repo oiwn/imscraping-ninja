@@ -38,6 +38,8 @@ gulp.task('serve', ['build', 'content', 'watch'], function() {
     }));
 });
 
+gulp.task('render', ['build', 'content']);
+
 gulp.task('default', ['serve'], function() {
   log.info('Website rendered...');
 });
