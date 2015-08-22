@@ -50,8 +50,14 @@ gulp.task('clean:root', function(callback) {
   del([rootPath], callback);
 });
 
-gulp.task('clean:content', function(callback) {
-  var contentPath = siteConfig.buildDir + '/content/*.*';
-  log.debug('Cleaning rendered content files...', chalk.bgBlue(contentPath));
+gulp.task('clean:posts', function(callback) {
+  var contentPath = siteConfig.buildDir + '/content/posts/*.*';
+  log.debug('Cleaning rendered content files for posts...', chalk.bgBlue(contentPath));
+  del([contentPath], callback);
+});
+
+gulp.task('clean:projects', function(callback) {
+  var contentPath = siteConfig.buildDir + '/content/projects/*.*';
+  log.debug('Cleaning rendered content files for projects...', chalk.bgBlue(contentPath));
   del([contentPath], callback);
 });

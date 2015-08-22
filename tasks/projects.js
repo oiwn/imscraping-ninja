@@ -6,9 +6,10 @@ var through = require('through2');
 var frontMatter = require('gulp-front-matter');
 
 var siteConfig = require('./../site.config.js');
+require('./clean.js');
 
 
-gulp.task('projects:list', function() {
+gulp.task('projects:list', ['clean:projects'], function() {
   var projectsList =
     gulp
       .src(siteConfig.content.projects)

@@ -10,19 +10,16 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   - [ ] controllers for single project view
 
-  ### Posts feature
-
-  - [ ] controllers for single project view
-
   ### Small fixes
 
-  - [ ] change partials extention to avoid linter errors (no doctype)
+  - [ ] change partials extension to avoid linter errors (no doctype)
 
   ### Improvements
 
-  - [ ] check if gulp executiong tasks in parallel
+  - [ ] check if gulp can execute tasks in parallel
   - [ ] speed up build process
   - [ ] backup content to the Dropbox
+
 
 # Features list
 
@@ -43,12 +40,15 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] https://github.com/sindresorhus/gulp-changed maybe possible to reduce rendering time?
   - [ ] https://npmjs.org/package/gulp-check-unused-css/ add util
   - [ ] https://github.com/Falci/falci-gulp-tasks check tasks
-  - [ ] make a blog http://www.rioki.org/2014/06/09/jekyll-to-gulp.html https://github.com/jpulgar/josepulgar.com
   - [ ] generate atom feed https://github.com/hexojs/hexo-generator-feed/blob/master/atom.ejs
   - [ ] generate the sitemap https://github.com/hexojs/hexo-generator-sitemap/blob/master/sitemap.ejs
-  - [ ] markdown for the posts https://github.com/chjj/marked
   - [ ] templates http://handlebarsjs.com/ (there is angular templates already, could be useful only to render sitemap)
   - [ ] pagination and filters for projects and posts
+  - [ ] use metalsmith to generate website instead of bunch of gulp scripts
+
+
+  - [ ] add open graph tags http://ogp.me/ (content submission to facebook/twitter)
+
 
 # How To Use
 

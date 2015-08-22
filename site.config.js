@@ -15,6 +15,7 @@ module.exports = {
       'src/components/angular-ui-router/release/angular-ui-router.js',
       'src/components/angular-resource/angular-resource.js',
       'src/components/angular-animate/angular-animate.js',
+      'src/components/angular-sanitize/angular-sanitize.js',
       'src/components/angular-loading-bar/build/loading-bar.js',
     ],
     appJS: [

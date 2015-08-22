@@ -56,18 +56,25 @@
 }
 
 .header-show-hide {
-  // padding: 10px;
   background: #333;
 }
 
-.header-show-hide {
+.header-show-hide.ng-show {
   -webkit-transition:all linear 0.2s;
   transition:all linear 0.2s;
+  // -webkit-animation-duration: 0.2s, 0.2s;
+  // -moz-animation-duration: 0.2s, 0.2s;
+  // -ms-animation-duration: 0.2s, 0.2s;
+  // animation-duration: 0.2s, 0.2s;
 }
 
 .header-show-hide.ng-hide {
-  height: 30%;
-  padding: 0 0;
-  margin: 0 0;
-  opacity: 0;
+  -webkit-animation-duration: 0.2s, 0.2s;
+  -moz-animation-duration: 0.2s, 0.2s;
+  -ms-animation-duration: 0.2s, 0.2s;
+  animation-duration: 0.2s, 0.2s;
+  -webkit-transition:all linear 0.2s;
+  transition:all linear 0.2s;
+  height: 0;
+  opacity: 0.1;
 }

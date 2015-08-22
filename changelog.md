@@ -1,3 +1,17 @@
+## 0.0.6
+
+- [x] controllers for single post view
+- [x] fill meta tags for pages in angular router
+- [x] rewrite header in index.html using html5 tags
+- [x] smooth animation of logo text hiding
+- [x] adjust styles
+- [x] clean files from content folder during update
+- [x] highlight code blocks inside the markdown
+- [x] add css code for the typographics (headers, lists etc.)
+- [x] setup page meta tags (title, description, keywords) using angularjs
+- [x] markdown for the posts https://github.com/chjj/marked
+- [x] make a blog http://www.rioki.org/2014/06/09/jekyll-to-gulp.html https://github.com/jpulgar/josepulgar.com
+
 ## 0.0.5
 
 - [x] projects as a services (static rendered json files as api endpoints)

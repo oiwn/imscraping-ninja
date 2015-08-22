@@ -16,7 +16,7 @@ gulp.task('htmllint', ['html5lint']);
 
 // build website and content
 gulp.task('build', ['less', 'vendors-js', 'app-js', 'copy-views', 'copy-root']);
-gulp.task('content', ['projects:list', 'posts:list']);
+gulp.task('content', ['projects:list', 'posts:details', 'posts:list']);
 
 gulp.task('watch', function() {
   gulp.watch(['./src/styles/*.less'], ['less']);
