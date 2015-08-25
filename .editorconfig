@@ -7,3 +7,6 @@ end_of_line = lf # doesn't work yet
 charset = utf-8
 trim_trailing_whitespace = true # doesn't work yet
 insert_final_newline = true # doesn't work yet
+
+[*.md]
+trim_trailing_whitespace = false

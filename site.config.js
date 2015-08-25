@@ -1,7 +1,7 @@
 module.exports = {
   siteName: 'imscraping.ninja',
   siteUrl: 'http://www.imscraping.ninja',
-  version: '0.0.5',
+  version: '0.0.6',
 
   env: {
     debug: true,

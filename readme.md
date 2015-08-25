@@ -19,7 +19,10 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] check if gulp can execute tasks in parallel
   - [ ] speed up build process
   - [ ] backup content to the Dropbox
-
+  - [ ] http://stackoverflow.com/questions/2489376/how-to-redirect-if-javascript-is-disabled
+        noscript redirect for users w/o javascript add urls like
+        http://www.imscraping.ninja/?_escaped_fragment_=
+  - [ ] http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html add defer to scripts
 
 # Features list
 
