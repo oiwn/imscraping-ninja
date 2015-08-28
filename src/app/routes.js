@@ -84,18 +84,24 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           ],
         },
       },
-    })
-
-    // if url is wrong
-    .state('404', {
-      url: '/404',
-      templateUrl: 'views/404.html',
-      pageMeta: {
-        title: 'Wrong url buddy...',
-        description: 'There is no router for url you tried',
-      },
     });
 
-  $urlRouterProvider.otherwise('404');
+  // });
+
+  // if url is wrong
+  // soft 404 is wrong http://googlewebmastercentral.blogspot.com/2008/08/farewell-to-soft-404s.html
+  // .state('404', {
+  //   url: '/404',
+  //   templateUrl: 'views/404.html',
+  //   pageMeta: {
+  //     title: 'Wrong url buddy...',
+  //     description: 'There is no router for url you tried',
+  //   },
+
+  // });
+
+  // $urlRouterProvider.otherwise('404');
+
   $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('!');
 });

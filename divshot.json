@@ -1,9 +1,8 @@
 {
   "name": "imscraping-ninja",
-  "root": "build",
-  "clean_urls": true,
+  "root": "./build",
+  "clean_urls": false,
   "prerender": true,
-  "error_page": "error.html",
   "routes": {
     "**": "index.html"
   }
