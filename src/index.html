@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 	<head>
-		<meta name="fragment" content="!">
+		<base href="/">
 		<meta charset="utf-8">
+		<meta name="fragment" content="!">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-		<!-- <base href="/"> -->
 
 		<title ng-bind="$state.current.data.pageMeta.title"></title>
 
@@ -37,17 +36,17 @@
 							</a>
 						</li>
 						<li ng-class="{current_page_item: isActive('blog')}">
-							<a ui-sref="blog" accesskey="2" title="Blog">
+							<a ui-sref="blog" accesskey="3" title="Blog">
 								Blog
 							</a>
 						</li>
 						<li ng-class="{current_page_item: isActive('projects')}">
-							<a ui-sref="projects" accesskey="3" title="Projects Page">
+							<a ui-sref="projects" accesskey="4" title="Projects Page">
 								Projects
 							</a>
 						</li>
 						<li ng-class="{current_page_item: isActive('about')}">
-							<a ui-sref="about" accesskey="4" title="About Page">
+							<a ui-sref="about" accesskey="5" title="About Page">
 								About
 							</a>
 						</li>

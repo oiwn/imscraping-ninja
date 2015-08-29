@@ -8,6 +8,7 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   ### Projects feature
 
+  - [ ] make content indexable by google
   - [ ] controllers for single project view
 
   ### Small fixes
@@ -23,6 +24,13 @@ Static website in HTML/LESS/AngularJS using gulp.
         noscript redirect for users w/o javascript add urls like
         http://www.imscraping.ninja/?_escaped_fragment_=
   - [ ] http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html add defer to scripts
+  - [ ] try to shim for old browsers
+  - [ ] manage 404 state ("hard 404" served by server) probably by configuring routes in divshot.json
+  - [ ] nested routes - http://stackoverflow.com/questions/24862540/angularjs-ui-router-handle-404-on-revolve
+  - [ ] some ideas from https://github.com/angular-ui/ui-router/blob/master/sample/index.html
+  - [ ] 404 for http://localhost:3474/posts/fddsfdsfs
+  - [ ] templateCache https://www.npmjs.com/package/gulp-ng-html2js or https://github.com/darlanalves/gulp-templatecache
+
 
 # Features list
 
