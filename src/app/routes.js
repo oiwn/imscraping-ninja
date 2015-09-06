@@ -84,16 +84,16 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           ],
         },
       },
-    });
+    })
 
-  // .state('404', {
-  //   //url: '/404',
-  //   templateUrl: 'views/404.html',
-  //   pageMeta: {
-  //     title: 'Wrong url buddy...',
-  //     description: 'There is no router for url you tried',
-  //   },
-  // });
+  .state('404', {
+    url: '/404',
+    templateUrl: 'views/404.html',
+    pageMeta: {
+      title: 'Wrong url buddy...',
+      description: 'There is no router defubed for this url',
+    },
+  });
 
   // if url is wrong
   // soft 404 is wrong http://googlewebmastercentral.blogspot.com/2008/08/farewell-to-soft-404s.html
@@ -107,12 +107,14 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   // });
 
-  $urlRouterProvider.otherwise(
-    function() {
-      window.location = '/404';
-    }
+  $urlRouterProvider.otherwise('404');
 
-  );
+  // $urlRouterProvider.otherwise(
+  //   function() {
+  //     window.location = '/404';
+  //   }
+  //
+  // );
 
   $locationProvider.hashPrefix('!');
   $locationProvider.html5Mode(true);

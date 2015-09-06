@@ -6,5 +6,8 @@
   "routes": {
     "/404": "error.html",
     "**": "index.html"
+  },
+  "cache_control": {
+    "/content/**": 31536000
   }
 }

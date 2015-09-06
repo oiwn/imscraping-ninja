@@ -15,6 +15,7 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   ### Small fixes
 
+  - [x] cache control for content
   - [ ] fix gulp tasks flow
 
   ### Improvements
