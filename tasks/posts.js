@@ -10,10 +10,8 @@ var merge = require('merge-stream');
 var frontMatter = require('gulp-front-matter');
 
 var siteConfig = require('./../site.config.js');
-require('./clean.js');
-
 var log = require('./../utils/createLogger.js')(siteConfig.env);
-
+require('./clean.js');
 
 gulp.task('posts:render', ['clean:posts'], function() {
   var posts =
@@ -66,7 +64,6 @@ gulp.task('posts:render', ['clean:posts'], function() {
   return merge(postDetails, postsList);
 });
 
-
 gulp.task('posts:list', ['clean:posts'], function() {
   var postsList =
     gulp
@@ -103,6 +100,7 @@ gulp.task('posts:details', ['clean:posts'], function() {
         }
       ))
       .pipe(through.obj(function(file, enc, cb) {
+        log.info('Post details:', file.postMeta.title);
         file.contents = new Buffer(
           JSON.stringify({
             meta: file.postMeta,

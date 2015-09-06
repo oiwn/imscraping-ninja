@@ -1,3 +1,17 @@
+## 0.0.7
+
+- [x] make content indexable by google
+- [x] new about page
+- [x] ga tracking code for email clicks
+- [x] add htmllint rule for partials (no doctype)
+- [x] manage 404 state ("hard 404" served by server) by configuring routes in divshot.json
+- [x] 404 for http://localhost:3474/posts/fddsfdsfs
+- [x] templateCache http://paulsalaets.com/pre-caching-angular-templates-with-gulp/
+- [x] add html minifier for partials
+- [x] update jslinters, rename js linting to js:check and same for less & html
+- [x] add open graph tags http://ogp.me/ (content submission to facebook/twitter)
+- [x] badge with dependencies https://david-dm.org/
+
 ## 0.0.6
 
 - [x] controllers for single post view

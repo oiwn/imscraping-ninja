@@ -1,7 +1,7 @@
 module.exports = {
   siteName: 'imscraping.ninja',
   siteUrl: 'http://www.imscraping.ninja',
-  version: '0.0.6',
+  version: '0.0.7',
 
   env: {
     debug: true,
@@ -49,10 +49,4 @@ module.exports = {
     blog: 'content/posts/*.md',
   },
 
-  pages: {
-    home: {template: 'home.html', context: 'default.json', content: 'home.md'},
-    about: {template: 'about.html', context: 'default.json', content: 'about.md'},
-    projects: {template: 'projects.html', context: 'default.json', content: 'projects.md'},
-    tech: {template: 'tech.html', context: 'default.json', content: 'tech.md'},
-  },
 };

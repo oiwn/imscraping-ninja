@@ -4,6 +4,7 @@
   "clean_urls": false,
   "prerender": true,
   "routes": {
+    "/404": "error.html",
     "**": "index.html"
   }
 }

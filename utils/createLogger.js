@@ -12,7 +12,7 @@ var levelNames = {
   30: 'INFO ',
   40: 'WARN ',
   50: 'ERROR',
-  60: 'FATAL'
+  60: 'FATAL',
 };
 
 var levelColors = {
@@ -21,19 +21,19 @@ var levelColors = {
   30: 'green',
   40: 'yellow',
   50: 'red',
-  60: 'magenta'
+  60: 'magenta',
 };
 
-function ConsoleStream(env){
+function ConsoleStream(env) {
   this.debug = env.debug;
 }
 
-ConsoleStream.prototype.write = function(data){
+ConsoleStream.prototype.write = function(data) {
   var level = data.level;
   var msg = '';
 
   // Time
-  if (this.debug){
+  if (this.debug) {
     msg += '[' + chalk.gray(moment(data.time).format(dateFormat)) + '] ';
   }
 
@@ -44,7 +44,7 @@ ConsoleStream.prototype.write = function(data){
   msg += data.msg + '\n';
 
   // Error
-  if (data.err){
+  if (data.err) {
     var err = data.err.stack || data.err.message;
     if (err) msg += chalk.gray(err) + '\n';
   }
@@ -52,21 +52,21 @@ ConsoleStream.prototype.write = function(data){
   process.stdout.write(msg);
 };
 
-function createLogger(env){
+function createLogger(env) {
   var streams = [];
 
-  if (!env.silent){
+  if (!env.silent) {
     streams.push({
       type: 'raw',
       level: env.debug ? 'trace' : 'info',
-      stream: new ConsoleStream(env)
+      stream: new ConsoleStream(env),
     });
   }
 
-  if (env.debug){
+  if (env.debug) {
     streams.push({
       level: 'trace',
-      path: 'var/debug.log'
+      path: 'var/debug.log',
     });
   }
 
@@ -74,8 +74,8 @@ function createLogger(env){
     name: 'ninja',
     streams: streams,
     serializers: {
-      err: bunyan.stdSerializers.err
-    }
+      err: bunyan.stdSerializers.err,
+    },
   });
 
   // Alias for logger levels

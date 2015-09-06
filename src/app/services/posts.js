@@ -21,7 +21,12 @@
           isArray: false,
           url: '/content/posts/:id.json',
           transformResponse: function(data) {
-            return angular.fromJson(data);
+            try {
+              return angular.fromJson(data);
+            }
+            catch (err) {
+              window.location = '/404';
+            }
           },
         },
       }

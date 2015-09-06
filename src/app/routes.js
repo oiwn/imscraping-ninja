@@ -86,6 +86,13 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       },
     });
 
+  // .state('404', {
+  //   //url: '/404',
+  //   templateUrl: 'views/404.html',
+  //   pageMeta: {
+  //     title: 'Wrong url buddy...',
+  //     description: 'There is no router for url you tried',
+  //   },
   // });
 
   // if url is wrong
@@ -100,8 +107,13 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   // });
 
-  // $urlRouterProvider.otherwise('404');
+  $urlRouterProvider.otherwise(
+    function() {
+      window.location = '/404';
+    }
 
-  $locationProvider.html5Mode(true);
+  );
+
   $locationProvider.hashPrefix('!');
+  $locationProvider.html5Mode(true);
 });

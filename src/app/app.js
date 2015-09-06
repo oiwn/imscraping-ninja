@@ -1,8 +1,11 @@
 'use strict';
 
+angular.module('templates', []);
+
 var wsNinja = angular.module('app', [
   'ui.router', 'ngResource', 'ngAnimate',
   'ngSanitize', 'angular-loading-bar',
+  'templates',
 ]);
 
 wsNinja.run(

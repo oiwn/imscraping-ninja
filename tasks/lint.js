@@ -31,7 +31,6 @@ gulp.task('jscs', function() {
   return gulp
     .src(jsToLint)
     .pipe(jscs())
-    .on('error', function() {})
     .pipe(stylish());
 });
 
@@ -47,5 +46,5 @@ gulp.task('html5lint', function() {
   // TODO: It doesn't work.
   return gulp
     .src(['./src/*.html', './src/views/*.html'])
-    .pipe(html5Lint());
+    .pipe(html5Lint({'doctype-first': false}));
 });

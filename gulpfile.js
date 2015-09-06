@@ -10,19 +10,19 @@ var siteConfig = require('./site.config.js');
 var log = require('./utils/createLogger.js')(siteConfig.env);
 
 // linters
-gulp.task('jslint', ['jshint', 'jscs']);
-gulp.task('lesslint', ['recess']);
-gulp.task('htmllint', ['html5lint']);
+gulp.task('js:check', ['jshint', 'jscs']);
+gulp.task('less:check', ['recess']);
+gulp.task('html:check', ['html5lint']);
 
 // build website and content
-gulp.task('build', ['less', 'vendors-js', 'app-js', 'copy-views', 'copy-root']);
+gulp.task('build', ['less', 'vendors-js', 'app-js', 'copy-root']); // 'copy-views',
 gulp.task('content', ['projects:list', 'posts:details', 'posts:list']);
 
 gulp.task('watch', function() {
   gulp.watch(['./src/styles/*.less'], ['less']);
   gulp.watch(['./src/app/*.js', './src/app/**/*.js'], ['app-js']);
   gulp.watch(['./src/*.html'], ['copy-root']);
-  gulp.watch(['./src/views/*.html'], ['copy-views']);
+  gulp.watch(['./src/views/*.html'], ['app-js']);
 
   // content
   gulp.watch(['./content/**/*.md'], ['content']);
