@@ -34,7 +34,9 @@
 			<div class="container">
 
 				<div style="position: absolute; margin-top: 20px;">
-					<div class="g-plusone"></div>
+					<div class="g-plusone"
+							data-href="{{ $state.href($state.current.name, $state.params, {absolute: true}) }}">
+					</div>
 				</div>
 
 				<nav id="nav-menu" ng-controller="NavCtrl">
@@ -87,7 +89,7 @@
 		<script src="assets/app.min.js"></script>
 
 		<!-- Google Plus Button. -->
-		<script type="text/javascript">
+		<script type="text/javascript" async defer>
 		  (function() {
 		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 		    po.src = 'https://apis.google.com/js/platform.js';
