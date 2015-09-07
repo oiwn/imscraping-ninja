@@ -15,6 +15,10 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   ### Small fixes
 
+  - [x] add canonical url
+  - [x] add url for open graph
+  - [ ] social share for posts
+  - [x] add google plus button
   - [x] cache control for content
   - [ ] fix gulp tasks flow
 

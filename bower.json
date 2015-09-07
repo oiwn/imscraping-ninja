@@ -22,6 +22,7 @@
     "normalize.css": "~3.0.3",
     "angular-resource": "~1.4.3",
     "angular-sanitize": "~1.4.4",
-    "highlight": "~7.0.1"
+    "highlight": "~7.0.1",
+    "rrssb": "~1.8.5"
   }
 }

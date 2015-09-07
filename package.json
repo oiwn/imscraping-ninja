@@ -1,7 +1,7 @@
 {
   "name": "imscraping-ninja",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.7",
+  "description": "http://imscraping.ninja website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/istinspring/imscraping-ninja.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "istinspring",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/istinspring/imscraping-ninja/issues"
   },
