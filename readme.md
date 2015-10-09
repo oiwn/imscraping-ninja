@@ -19,7 +19,7 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [x] add canonical url
   - [x] add url for open graph
   - [ ] social share for posts
-  - [x] add google plus button
+  - [x] add google plus buttonOB
   - [x] cache control for content
   - [ ] fix gulp tasks flow
 
@@ -63,7 +63,8 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] generate the sitemap https://github.com/hexojs/hexo-generator-sitemap/blob/master/sitemap.ejs
   - [ ] templates http://handlebarsjs.com/ (there is angular templates already, could be useful only to render sitemap)
   - [ ] pagination and filters for projects and posts
-  - [ ] use metalsmith to generate website instead of bunch of gulp scripts         http://blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/ https://github.com/segmentio/metalsmith
+  - [ ] use metalsmith to generate website instead of bunch of gulp scripts
+        http://blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/ https://github.com/segmentio/metalsmith
 
 # How To Use
 
