@@ -2,8 +2,6 @@
 
 var gulp = require('gulp');
 
-// var siteConfig = require('./../site.config.js');
-
 //var applyContext = function() {};
 
 gulp.task('pages:build', function() {

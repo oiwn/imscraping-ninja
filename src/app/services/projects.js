@@ -6,8 +6,8 @@
 
   wsNinja.service('Projects', function($resource) {
     return $resource(
-      '/content/projects-list.json',
-      {},
+      '/content/projects/:id.json',
+      {id: '@id'},
       {
         list: {
           method: 'GET',
@@ -15,6 +15,20 @@
           url: '/content/projects-list.json',
           transformResponse: function(data) {
             return angular.fromJson(data);
+          },
+        },
+        find: {
+          method: 'GET',
+          isArray: false,
+          url: '/content/projects/:id.json',
+          transformResponse: function(data) {
+            try {
+              return angular.fromJson(data);
+            }
+            catch (err) {
+              console.log('Error convert project json data:', data);
+              window.location = '/404';
+            }
           },
         },
       }

@@ -10,7 +10,8 @@ Static website in HTML/LESS/AngularJS using gulp.
 
   ### Projects feature
 
-  - [ ] controllers for single project view
+  - [x] controllers for single project view
+  - [x] arrange project in the same way as posts
   - [ ] use schema.org on about page
 
   ### Small fixes
@@ -35,6 +36,11 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] some ideas from https://github.com/angular-ui/ui-router/blob/master/sample/index.html
   - [ ] scss instead of less
   - [ ] https://github.com/yaniswang/HTMLHint/wiki/Usage instead of html5lint
+  - [ ] sort articles by data
+  - [ ] new markup for the articles/posts lists
+  - [ ] add tiny grid framework
+  - [ ] split sitemap to 3 parts: main, posts and project.
+  - [ ] automatically generate posts and projects sitemaps
 
 # Features list
 
@@ -57,7 +63,7 @@ Static website in HTML/LESS/AngularJS using gulp.
   - [ ] generate the sitemap https://github.com/hexojs/hexo-generator-sitemap/blob/master/sitemap.ejs
   - [ ] templates http://handlebarsjs.com/ (there is angular templates already, could be useful only to render sitemap)
   - [ ] pagination and filters for projects and posts
-  - [ ] use metalsmith to generate website instead of bunch of gulp scripts
+  - [ ] use metalsmith to generate website instead of bunch of gulp scripts         http://blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/ https://github.com/segmentio/metalsmith
 
 # How To Use
 

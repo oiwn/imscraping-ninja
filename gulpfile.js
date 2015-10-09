@@ -1,11 +1,10 @@
 'use strict';
 
 var gulp = require('gulp');
-
 var requireDir = require('require-dir');
 var webserver = require('gulp-webserver');
-requireDir('./tasks');
 
+requireDir('./tasks');
 var siteConfig = require('./site.config.js');
 var log = require('./utils/createLogger.js')(siteConfig.env);
 
@@ -16,7 +15,10 @@ gulp.task('html:check', ['html5lint']);
 
 // build website and content
 gulp.task('build', ['less', 'vendors-js', 'app-js', 'copy-root']); // 'copy-views',
-gulp.task('content', ['projects:list', 'posts:details', 'posts:list']);
+gulp.task('content', [
+  'projects:list', 'projects:details',
+  'posts:details', 'posts:list',
+]);
 
 gulp.task('watch', function() {
   gulp.watch(['./src/styles/*.less'], ['less']);

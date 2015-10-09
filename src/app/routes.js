@@ -86,14 +86,21 @@ wsNinja.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       },
     })
 
-  .state('404', {
-    url: '/404',
-    templateUrl: 'views/404.html',
-    pageMeta: {
-      title: 'Wrong url buddy...',
-      description: 'There is no router defubed for this url',
-    },
-  });
+    .state('project_details', {
+      url: '/projects/:id',
+      templateUrl: 'views/projectDetails.html',
+      controller: 'ProjectDetailsCtrl',
+      data: {pageMeta: {}},
+    })
+
+    .state('404', {
+      url: '/404',
+      templateUrl: 'views/404.html',
+      pageMeta: {
+        title: 'Wrong url buddy...',
+        description: 'There is no router defubed for this url',
+      },
+    });
 
   $urlRouterProvider.otherwise('404');
   $locationProvider.html5Mode(true).hashPrefix('!');
