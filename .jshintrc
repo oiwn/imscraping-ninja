@@ -1,7 +1,0 @@
-{
-  "undef": true,
-  "unused": true,
-  "node": true,
-  "globalstrict": true,
-  "predef": ["angular", "window"]
-}

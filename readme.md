@@ -1,23 +1,21 @@
-# imwebscraping.ninja website code
+# imscraping.ninja website code
 
-https://david-dm.org/istinspring/imscraping-ninja.svg
+!(https://david-dm.org/istinspring/imscraping-ninja.svg)
 
 [web scraping service](http://imscraping.ninja)
 
-Static website build with HTML/LESS/AngularJS using gulp.
+Static website build with ~~HTML/LESS/AngularJS~~ ReactJS using ~~gulp~~ webpack.
 
 # How To Use
 
 Setup project environment
 
   + ```npm install```
-  + ```bower install```
 
 Develop
 
-  + ```gulp serve```
+  + ```npm start```
 
 Deploy
 
-  + ```gulp render```
-  + ```divshot push```
+well, it's complicated. trying openshift for now.
