@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 var data = require('./data');
 
@@ -17,7 +19,7 @@ var webpackConfig = {
   output: {
     filename: 'bundle.js',
     // publicPath: '/',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/diy'),
     libraryTarget: 'umd'
   },
 
@@ -28,11 +30,17 @@ var webpackConfig = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: path.join(__dirname, 'node_modules')
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       }
     ]
   },
 
   plugins: [
+    new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
     new webpack.HotModuleReplacementPlugin()
   ],
 
@@ -50,6 +58,8 @@ var serverSideWrapper = function(wpConf) {
         contentBase: './assets'
       },
       plugins: [
+        new ExtractTextPlugin('styles.css'),
+        new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
         new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
       ]
     };
@@ -57,7 +67,5 @@ var serverSideWrapper = function(wpConf) {
   }
   return wpConf;
 };
-
-console.log(serverSideWrapper(webpackConfig));
 
 module.exports = serverSideWrapper(webpackConfig);

@@ -1,5 +1,17 @@
 import React from 'react';
+import radium from 'radium';
 import Nav from './Nav.jsx';
+import Container from './Layout.jsx';
+
+const styles = {
+  header: {
+    overflow: 'hidden',
+    padding: '1em 0em',
+    background: '#333 no-repeat center',
+    backgroundSize: 'cover',
+    marginBottom: '1em'
+  }
+};
 
 class Header extends React.Component {
   render() {
@@ -10,8 +22,8 @@ class Header extends React.Component {
     ];
 
     return (
-      <header id="header">
-        <div className="container">
+      <header style={styles.header}>
+        <Container>
           <div style={{ position: 'absolute', marginTop: 20 }}>
             <p>G+</p>
           </div>
@@ -23,10 +35,10 @@ class Header extends React.Component {
             <span>by GrabLab Team</span>
           </div>
 
-        </div>
+        </Container>
       </header>
     );
   }
 }
 
-export default Header;
+export default radium(Header);
