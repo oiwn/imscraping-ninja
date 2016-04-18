@@ -6,7 +6,11 @@ class Nav extends React.Component {
     // TODO: actually according to https://goo.gl/PpO6ck
     // is's possible to use activeClassName in order
     // to change class for the current acitve route.
-    const pathname = this.props.location.pathname;
+    var pathname = this.props.location.pathname;
+    // remove trailing slash /
+    if (pathname.endsWith('/') && pathname.length > 1) {
+      pathname = pathname.slice(0, -1);
+    }
     const navItems = this.props.items.map((item, index) => {
       const isActive = pathname === item.path;
       return (

@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 var data = require('./data');
@@ -18,7 +18,7 @@ var webpackConfig = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build/diy'),
+    path: path.resolve(__dirname, 'build'),
     libraryTarget: 'umd'
   },
 

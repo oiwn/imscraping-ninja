@@ -25,13 +25,13 @@ class App extends React.Component {
       <html>
         <head>
           <title>{this.props.title}</title>
-          <link href="styles.css" rel="stylesheet"></link>
+          <link href="/styles.css" rel="stylesheet"></link>
         </head>
         <body>
           <div id="app">
             {appBody}
           </div>
-          <script type="text/javascript" src="bundle.js" charSet="utf-8">
+          <script type="text/javascript" src="/bundle.js" charSet="utf-8">
           </script>
         </body>
       </html>
