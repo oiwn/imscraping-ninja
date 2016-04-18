@@ -3,8 +3,8 @@
   "version": "0.5.0",
   "description": "http://www.imscraping.ninja web blog",
   "scripts": {
-    "dev-server": "webpack-dev-server --progress --no-info --colors",
-    "dev-client": "NODE_ENV=client webpack-dev-server --progress --no-info --colors",
+    "dev-server": "webpack-dev-server --progress --no-info --colors --port 9000",
+    "dev-client": "NODE_ENV=client webpack-dev-server --progress --no-info --colorsi --port 9000",
     "start": "npm run dev-server",
     "build": "webpack --progress --colors",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
@@ -15,6 +15,8 @@
     "url": "git+https://github.com/istinspring/imscraping-ninja.git"
   },
   "keywords": [
+    "personal",
+    "reactjs",
     "blog",
     "web",
     "scraping",

@@ -10,6 +10,7 @@ import routes from './routes.jsx';
 
 // client side rendering
 if (typeof document !== 'undefined') {
+  // If need to load props from rendered page
   // const initialProps = JSON.parse(
   //   document.getElementById('initial-props').innerHTML);
   const initialProps = {};
@@ -24,10 +25,11 @@ export default (locals, callback) => {
   const history = createMemoryHistory();
   const location = history.createLocation(locals.path);
 
+  // could use ReactDOMServer.renderToString
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     callback(
       null,
-      ReactDOMServer.renderToString(<RouterContext {...renderProps} />)
+      ReactDOMServer.renderToStaticMarkup(<RouterContext {...renderProps} />)
     );
   });
 };

@@ -1,6 +1,5 @@
 /* eslint-env es6 */
 import React from 'react';
-import radium from 'radium';
 
 const styles = {
   container: {
@@ -15,4 +14,4 @@ class Container extends React.Component {
   }
 }
 
-export default radium(Container);
+export default Container;

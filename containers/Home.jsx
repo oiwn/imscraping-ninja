@@ -3,7 +3,8 @@ import React from 'react';
 class Home extends React.Component {
   render() {
     return (
-      <div id="wrapper-content" itemScope itemType="http://schema.org/Organization">
+      <div id="wrapper-content"
+           itemScope itemType="http://schema.org/Organization">
         <div id="welcome" className="container">
           <div className="title">
             <h2>

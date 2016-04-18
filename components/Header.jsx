@@ -1,5 +1,4 @@
 import React from 'react';
-import radium from 'radium';
 import Nav from './Nav.jsx';
 import Container from './Layout.jsx';
 
@@ -41,4 +40,4 @@ class Header extends React.Component {
   }
 }
 
-export default radium(Header);
+export default Header;

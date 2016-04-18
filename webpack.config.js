@@ -8,7 +8,7 @@ var data = require('./data');
 var webpackConfig = {
   entry: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:9090',
     './entry.js'
   ],
   devServer: {
@@ -18,7 +18,6 @@ var webpackConfig = {
   },
   output: {
     filename: 'bundle.js',
-    // publicPath: '/',
     path: path.resolve(__dirname, 'build/diy'),
     libraryTarget: 'umd'
   },
@@ -40,7 +39,7 @@ var webpackConfig = {
 
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
+    // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
     new webpack.HotModuleReplacementPlugin()
   ],
 
@@ -59,7 +58,7 @@ var serverSideWrapper = function(wpConf) {
       },
       plugins: [
         new ExtractTextPlugin('styles.css'),
-        new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
+        // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
         new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
       ]
     };
