@@ -3,6 +3,7 @@ var webpack = require('webpack');
 // var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+var reactRouterToArray = require('react-router-to-array');
 var websiteData = require('./website.config.js');
 
 var webpackConfig = {
@@ -48,6 +49,8 @@ var webpackConfig = {
 
 // Server-side config
 var serverSideWrapper = function(wpConf) {
+  require("babel-register");  // to import jsx files
+  var routes = reactRouterToArray(require('./routes.jsx').default);
   if (process.env.NODE_ENV !== 'client') {
     var config = {
       entry: [
@@ -60,7 +63,7 @@ var serverSideWrapper = function(wpConf) {
         new ExtractTextPlugin('styles.css'),
         // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
         new StaticSiteGeneratorPlugin(
-          'bundle.js', websiteData.routes, websiteData)
+          'bundle.js', routes, websiteData)
       ]
     };
     return Object.assign(wpConf, config);
