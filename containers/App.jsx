@@ -15,9 +15,11 @@ class App extends React.Component {
       </div>
     );
 
+    return React.cloneElement(appBody);
+
     // Client side rendering
     if (typeof document !== 'undefined') {
-      return (<div id="app">{appBody}</div>);
+      return React.cloneElement(appBody);
     }
 
     // Render whole page for server side
@@ -29,6 +31,7 @@ class App extends React.Component {
         </head>
         <body>
           <div id="app">
+            {/* {React.cloneElement(appBody)} */}
             {appBody}
           </div>
           <script type="text/javascript" src="/bundle.js" charSet="utf-8">

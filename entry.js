@@ -25,11 +25,28 @@ export default (locals, callback) => {
   const history = createMemoryHistory();
   const location = history.createLocation(locals.path);
 
+  const toHtml = (app) => {
+    return `<html>
+        <head>
+          <title>Title</title>
+          <link href="/styles.css" rel="stylesheet"></link>
+        </head>
+        <body>
+          <div id="app">${app}</div>
+          <script type="text/javascript" src="/bundle.js" charSet="utf-8">
+          </script>
+        </body>
+      </html>`;
+  };
+
   // could use ReactDOMServer.renderToString
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     callback(
       null,
-      ReactDOMServer.renderToStaticMarkup(<RouterContext {...renderProps} />)
+      toHtml(
+        ReactDOMServer.renderToString(<RouterContext {...renderProps} />)
+      )
+      // ReactDOMServer.renderToStaticMarkup(<RouterContext {...renderProps} />)
     );
   });
 };

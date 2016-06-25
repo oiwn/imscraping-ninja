@@ -3,7 +3,7 @@ var webpack = require('webpack');
 // var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var data = require('./data');
+var websiteData = require('./website.config.js');
 
 var webpackConfig = {
   entry: [
@@ -59,7 +59,8 @@ var serverSideWrapper = function(wpConf) {
       plugins: [
         new ExtractTextPlugin('styles.css'),
         // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
-        new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
+        new StaticSiteGeneratorPlugin(
+          'bundle.js', websiteData.routes, websiteData)
       ]
     };
     return Object.assign(wpConf, config);

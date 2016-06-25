@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 class Nav extends React.Component {
+  /* Navigation bar componen */
   render() {
     // TODO: actually according to https://goo.gl/PpO6ck
     // is's possible to use activeClassName in order

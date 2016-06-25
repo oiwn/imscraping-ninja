@@ -32,6 +32,17 @@ class Home extends React.Component {
             </a>
           </div>
 
+          <div className="content">
+            <h4>Use cases</h4>
+            <br />
+            <ul>
+              <li>Leads generation</li>
+              <li>Collect data from business lists/directories</li>
+              <li>Data packs for research projects</li>
+              <li>Price monitoring software</li>
+            </ul>
+          </div>
+
         </div>
       </div>
     );

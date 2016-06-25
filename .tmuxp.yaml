@@ -1,0 +1,18 @@
+session_name: imscrapingninja
+windows:
+  - window_name: code
+    focus: true
+    start-directory: ./
+    panes:
+      - shell_command:
+          - emacs
+  - window_name: cmd
+    start-directory: ./
+    panes:
+      - shell_command:
+          - clear
+  - window_name: srv
+    start-directory: ./
+    panes:
+      - shell_command:
+          - clear

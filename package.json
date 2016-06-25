@@ -6,7 +6,7 @@
     "dev-server": "webpack-dev-server --progress --no-info --colors --port 9000",
     "dev-client": "NODE_ENV=client webpack-dev-server --progress --no-info --colorsi --port 9000",
     "start": "npm run dev-server",
-    "build": "webpack --progress --colors",
+    "build": "NODE_ENV=production webpack --progress --colors -p",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

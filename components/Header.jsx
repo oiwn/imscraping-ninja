@@ -17,7 +17,7 @@ class Header extends React.Component {
     const navItems = [
       { path: '/', name: 'Home' },
       { path: '/tech', name: 'Tech' },
-      { path: '/services', name: 'Serices' }
+      { path: '/services', name: 'Services' }
     ];
 
     return (
