@@ -1,18 +1,29 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "import",
     "react",
-    "babel"
+    "import"
   ],
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "arrowFunctions": true,
       "experimentalObjectRestSpread": true
+    },
+    "import/resolve": {
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".json"
+      ]
     }
   },
-  "extends": "eslint-config-google",
+  "extends": [
+    "eslint:recommended", "plugin:react/recommended",
+    "plugin:import/errors"
+  ],
   "rules": {
     "require-jsdoc": 0,
     "indent": [2, 2, {"SwitchCase": 1}],

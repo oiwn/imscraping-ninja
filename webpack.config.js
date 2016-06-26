@@ -1,27 +1,29 @@
+/* eslint-env browser, node */
+/* globals module require */
 var path = require('path');
 var webpack = require('webpack');
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var reactRouterToArray = require('react-router-to-array');
-var websiteData = require('./website.config.js');
+// var websiteData = require('./website.config.js');
 
 var webpackConfig = {
   entry: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:9090',
-    './entry.js'
+    'webpack-dev-server/client?http://localhost:3030',
+    './client.jsx'
   ],
   devServer: {
     hot: true,
-    contentBase: './assets',
-    historyApiFallback: true
+    contentBase: './build',
+    historyApiFallback: false
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     libraryTarget: 'umd'
   },
+  target: "web",
+  progress: true,
 
   module: {
     loaders: [
@@ -31,6 +33,7 @@ var webpackConfig = {
         loader: 'babel-loader',
         exclude: path.join(__dirname, 'node_modules')
       },
+      { test: /\.json$/, loader: 'json' },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
@@ -39,31 +42,54 @@ var webpackConfig = {
   },
 
   plugins: [
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: JSON.stringify(
+    //       process.env.NODE_ENV ? process.env.NODE_ENV : 'production')
+    //   }
+    // }),
     new ExtractTextPlugin('styles.css'),
-    // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
     new webpack.HotModuleReplacementPlugin()
   ],
 
-  resolve: ['', '.js', '.jsx', '.css']
+  resolve: ['', '.js', '.jsx', '.css', '.json']
+
+  // resolve: {
+  //   root: [
+  //     path.resolve(__dirname)
+  //   ],
+  //   modulesDirectories: [
+  //     `node_modules`
+  //   ],
+  //   extensions: ['', '.js', '.jsx', '.css']
+  // }
 };
 
 // Server-side config
-var serverSideWrapper = function(wpConf) {
+var webpackServerConfig = function(webpackConfig) {
   require("babel-register");  // to import jsx files
-  var routes = reactRouterToArray(require('./routes.jsx').default);
+  var paths = require('./routes.jsx').allPaths;
   if (process.env.NODE_ENV !== 'client') {
     var config = {
+      target: 'node',
       entry: [
-        './entry.js'
+        './entry.jsx'
       ],
       devServer: {
         contentBase: './assets'
       },
       plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: JSON.stringify(
+              process.env.NODE_ENV ? process.env.NODE_ENV : 'production')
+          }
+        }),
+        new webpack.optimize.OccurenceOrderPlugin(),
         new ExtractTextPlugin('styles.css'),
-        // new HtmlWebpackPlugin({ template: 'pages/_index.html' }),
+        new webpack.optimize.DedupePlugin(),
         new StaticSiteGeneratorPlugin(
-          'bundle.js', routes, websiteData)
+          'bundle.js', paths, websiteData)
       ]
     };
     return Object.assign(wpConf, config);
@@ -71,4 +97,9 @@ var serverSideWrapper = function(wpConf) {
   return wpConf;
 };
 
-module.exports = serverSideWrapper(webpackConfig);
+module.exports = webpackConfig;
+
+// module.exports = {
+//   webpackConfig: webpackConfig,
+//   webpackServerConfig: webpackServerConfig
+// }

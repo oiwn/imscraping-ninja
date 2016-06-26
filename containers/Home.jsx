@@ -26,7 +26,7 @@ class Home extends React.Component {
             </p>
 
             <a href="mailto:alex@imscraping.ninja" className="button"
-               onclick="ga('send', 'event', 'Email', 'Click', '', 1)">
+               onClick="ga('send', 'event', 'Email', 'Click', '', 1)">
               Contact Us<br />
               <span itemProp="email">alex@imscraping.ninja</span>
             </a>

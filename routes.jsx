@@ -1,13 +1,18 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-import { App, Home, Tech, Projects, Services } from './containers';
+import { Route } from 'react-router';
+/* import { App, Home, Tech, Services } from './containers';*/
+/* import { articleRoutes } from './pages/articles/articles.jsx';*/
+import config from './config.loader';
+import createRoutes from './utils/create-routes.js';
 
-const routes = (
-  <Route path="/" component={App}>
-    <IndexRoute component={Home} />
-    <Route path="tech" component={Tech} />
-    <Route path="services" component={Services} />
-  </Route>
+/* const { paths, routesObj } = createRoutes(globPaes('articles'));*/
+
+const { pages } = JSON.parse(config());
+const { paths, routesObj } = createRoutes(pages);
+const router = (
+  <Route routes={routesObj} />
 );
 
-export default routes;
+export const allPaths = paths;
+export const routes = routesObj;
+export default router;
