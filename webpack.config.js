@@ -9,7 +9,7 @@ var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 var webpackConfig = {
   entry: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:3030',
+    'webpack-dev-server/client?http://localhost:3000',
     './client.jsx'
   ],
   devServer: {
@@ -66,7 +66,7 @@ var webpackConfig = {
 };
 
 // Server-side config
-var webpackServerConfig = function(webpackConfig) {
+var webpackServerConfig = function(wpConf) {
   require("babel-register");  // to import jsx files
   var paths = require('./routes.jsx').allPaths;
   if (process.env.NODE_ENV !== 'client') {
