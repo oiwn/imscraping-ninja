@@ -16,3 +16,8 @@ windows:
     panes:
       - shell_command:
           - clear
+  - window_name: dir
+    start-directory: ./
+    panes:
+      - shell_command:
+          - mc

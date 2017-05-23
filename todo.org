@@ -1,6 +1,0 @@
-* Styles
-** Use inline styles
-* Webpack generation
-** Generate index.html automatically
-* Blog
-* Pages

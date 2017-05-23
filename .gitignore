@@ -17,15 +17,16 @@ coverage
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
+node_modules/
 
 # divshot
 .divshot-cache/
 .publish
 
 # my
-src/components
+site/static/css/*.css
+site/public
 build/
 content/
 tmp/
-imscrapingninja.yaml
+.tmux.yaml

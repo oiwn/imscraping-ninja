@@ -1,0 +1,16 @@
+@import 'reset';
+@import 'variables';
+@import 'gridlex.scss';
+
+
+body {
+  font: 100% $font-stack;
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-width;
+  background-color: $main-background-color;
+}
+
+main {
+  background-color: $content-background-color;
+}

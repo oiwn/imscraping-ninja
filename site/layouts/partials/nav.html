@@ -1,0 +1,12 @@
+<nav id="nav-menu">
+  <ul>
+		<li {{if eq .Page.URL "/"}}class="active"{{end}}>
+			<a href="{{.Site.BaseURL}}">Home</a>
+		</li>
+		{{ range .Site.Menus.header }}
+		<li {{if eq .URL $.URL}}class="active"{{end}}>
+			<a href="{{.URL}}">{{.Name}}</a>
+		</li>
+		{{end}}
+  </ul>
+</nav>

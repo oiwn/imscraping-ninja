@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container">
+        {{ partial "nav.html" . }}
+        <div id="logo" class="header-show-hide">
+          <h1><a href="/">Web Scraping Service</a></h1>
+          <span class="subtitle">by GrabLab Team</span>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+     <div class="grid">
+       {{ block "main" . }}
+       <!-- The part of the page that begins to differ between templates -->
+       {{ end }}
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer">
+        <div class="title">
+          <h2>Email us and describe your problem!</h2>
+          <span class="byline">
+            We'll check and message back with estimated time and price
+          </span>
+        </div>
+
+        <p>
+          &copy; imWebScraping.ninja 2008-2017. All rights reserved.
+          Dev by <a href="http://grablab.org/">GrabLab</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
