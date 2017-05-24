@@ -1,9 +1,12 @@
-// Variables
+// Global style settings
 
-$font-stack: 'Source Sans Pro', sans-serif;
+/* Font */
+$font-stack: 'Source Sans Pro', Helvetica, sans-serif;
 $font-size: 1.2rem;
 $font-width: 400;
-$font-color: #3A4145;
+$light-font-color: #3A4145;
+$dark-font-color: #333333;
 
-$main-background-color: #333;
-$content-background-color: #FEFEFE;
+/* Backgrounds */
+$light-background-color: #FEFEFE;
+$dark-background-color: #333333;

@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "!(https://david-dm.org/istinspring/imscraping-ninja.svg)",
   "scripts": {
+    "clean": "rm -f site/static/js/*.js site/static/css/*.css",
+    "babel:build": "babel src/js --out-file site/static/bundle.js --source-maps",
+    "babel:watch": "babel src/js --watch --out-file site/static/bundle.js --source-maps",
     "sass:build": "node-sass --include-path node_modules/gridlex/src src/scss/main.scss site/static/css/main.css",
+    "sass:watch": "onchange 'src/scss/**/*.scss' -- npm run sass:build",
+    "build:assets": "npm run clean && npm run sass:build && npm run babel:build",
+    "build": "npm run build:assets && hugo",
+    "hugo:watch": "hugo serve -w",
+    "start": "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve -w'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +25,11 @@
   },
   "homepage": "https://github.com/istinspring/imscraping-ninja#readme",
   "dependencies": {
+    "babel-cli": "^6.24.1",
     "gridlex": "^2.3.1",
-    "node-sass": "^4.5.3"
+    "material-components-web": "^0.11.1",
+    "node-sass": "^4.5.3",
+    "onchange": "^3.2.1",
+    "riot": "^3.5.1"
   }
 }

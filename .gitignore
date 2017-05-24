@@ -19,14 +19,10 @@ coverage
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules/
 
-# divshot
-.divshot-cache/
-.publish
-
 # my
 site/static/css/*.css
+site/static/js/*.js
 site/public
 build/
-content/
 tmp/
 .tmux.yaml
