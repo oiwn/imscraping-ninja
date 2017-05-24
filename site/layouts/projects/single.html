@@ -4,9 +4,13 @@
   <div class="mdc-layout-grid__cell--span-10 ">
     <div class="page-content">
       <h2 class="mdc-typography--display3">{{.Title}}</h2>
-      <span class="mdc-typography__byline">{{.Params.subtitle}}</span>
+      <span class="mdc-typography__byline">{{.Params.description}}</span>
       <div class="content-box mdc-typography--body2">
         <article class="better-markdown">
+          <ul>
+            <li>Pages/Items crawled: {{.Params.pages_crawled}}</li>
+            <li>Delivered: {{.Params.final_result}}</li>
+          </ul>
           {{.Content}}
         </article>
       </div>

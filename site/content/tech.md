@@ -1,50 +1,60 @@
 +++
-title = "Tech"
+title = "Technological Stack"
+subtitle = "frameworks and libraries for everyday things"
 date = "2014-04-09"
 menu = "main"
 +++
+My main fields of activities are web scraping, data processing and web
+dashboards development. I.e. everything related to a data driven solutions such
+as prices monitoring systems, product databases building, content aggregation,
+data pipelines, extraction of value from data using machine learning. On this
+fields i'm able to provide consulting or some kind of expertise.
 
 ## Web Scraping and Web Automation
 
-- Grab Framework - web scraping framework for the practical usage
-- Scrapy - slow, heavy but common solution
-- Selenium - for the web automation, testing purposes and if JS execution is required
-- PhantomJS - headles browser based on Google V8
+- **Grab Framework** - asynchroneous web scraping framework (pycurl and urllib3)
+- **Scrapy** - same as above but more heavy and more general
+- **Selenium** - for the web automation, testing purposes and if JS execution is required
+- **PhantomJS** - headles browser able to execute JavaScript
 
 ## Databases
 
-- MongoDB - working horse. Fit scraping requrements just perfectly
-- Redis - caching, task queues
-- MySQL, PostgreSQL - rarely used for data scraping, maily as a storage for data delivery
+- **MongoDB** - documents schema-less database, perfectly suited as a middle data warehous
+- **Redis** - in-memory database, used as a cache, tasks queue, pub/sub and for bloom filters.
+- **PostgreSQL** - RDBSM "traditional" database (tables, schema)
+- **ElasticSearch** - search index
+- **InfluxDB** - time series database (i.e. prices, quantities etc.)
 
 ## Backend
 
-- Flask - lightwidth with solutions to quickly prototype REST interface to the database
+- Django - most popular framework in Python ecosystem
+- Flask - light weight python framework
+- **aioHTTP** - asynchroneous client/server framework for Python > 3.5 based on asyncio library
 - Loopback - javascript REST framework based on expressjs
-- Django - general purpose, battaries include python framework
 
+## Frontend
 
-Hugo is a static site engine written in Go.
+- **ReactJS** - front-end framework from Facebook
+- AngularJS 1.x - front-end framework from Google
+- RiotJS - tiny components framework (when React/Angular would be overengeenering)
+- Webpack - build system for front-end app
+- ES6 - modern standard of javascript (ECMA2016)
 
+## Testing
 
-It makes use of a variety of open source projects including:
+- Unit tests
+- Property based tests
+- Integrational tests
+- BDD
 
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
+## DevOps
 
-Learn more and contribute on [GitHub](https://github.com/spf13).
+- **Docker** - i using containers for services (API, Dashboard etc.) and apps deployment
+- Kubernetes - cluster orchestration solution from Google (some mild experience)
+- Amazon AWS - proficient with amazon cloud solutions
+- Heroku - limited experience with heroku PaaS cloud
+- OpenShift - cloud computing from RedHat, recently moved to docker containers, nice
 
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-* Built in [Go](http://golang.org/)
-* Loosely inspired by [Jekyll](http://jekyllrb.com/)
-* Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-* Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
+[Github](https://github.com/istinspring/)
 
 Thanks for reading!

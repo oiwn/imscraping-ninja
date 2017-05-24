@@ -1,7 +1,7 @@
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # directories
-archetypeDir = "archetypes"
+archetypeDir = "site/archetypes"
 dataDir = "site/data"
 contentDir = "site/content"
 staticDir = "site/static"
@@ -10,7 +10,7 @@ publishDir = "build"
 
 # site
 languageCode = "en"
-baseURL = "http://imscraping.ninja/"
+baseURL = "http://www.imscraping.ninja/"
 title = "Web Scraping and Data Mining Service"
 
 [menu]

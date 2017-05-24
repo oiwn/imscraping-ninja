@@ -20,9 +20,10 @@ coverage
 node_modules/
 
 # my
+site/static/*.css
+site/static/*.js
 site/static/css/*.css
 site/static/js/*.js
-site/public
 build/
 tmp/
 .tmux.yaml

@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>{{ .Title }}</title>
+    <meta name="keywords" content="web scraping, data processing, rest api, machine learning">
+    <meta name="description" content="my personal web scraping service">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+    <meta name="google-site-verification" content="2drxWpOVZNvUU-ODHwM8ffKbXy3vH41YYfVnudIE8wM" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}bundle.css">
   </head>
-  <body>
+  <body class="mdc-typography">
     <!-- Header  -->
     <header>
-      <div class="grid-center">
-        <div class="col-10">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__cell--span-12">
           {{ partial "nav.html" . }}
           <div class="title-box">
             <h1>Web Scraping Service</h1>
@@ -25,8 +29,8 @@
     </main>
     <!-- Footer -->
     <footer>
-      <div class="grid-center">
-        <div class="col-10">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__cell--span-12">
           <div class="footer-callout-box">
             <h3>Email me and describe your problem!</h3>
             <span>
@@ -41,4 +45,5 @@
       </div>
     </footer>
   </body>
+  <script src="{{ .Site.BaseURL }}bundle.js"></script>
 </html>
