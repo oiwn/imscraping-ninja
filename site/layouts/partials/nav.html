@@ -1,7 +1,7 @@
 <nav class="top-nav">
   <ul class="top-nav__list">
 		<li class='top-nav__item {{if eq .Page.URL "/"}}top-nav__item-active{{end}}'>
-			<a class="top-nav__link" href="{{.Site.BaseURL}}">Home</a>
+			<a class="top-nav__link" href="/">Home</a>
 		</li>
 		{{ range .Site.Menus.header }}
 		<li class="top-nav__item {{if eq .URL $.URL}}top-nav__item-active{{end}}">

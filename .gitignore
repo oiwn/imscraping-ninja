@@ -20,6 +20,10 @@ coverage
 node_modules/
 
 # my
+.netlify
+.tmuxp.yaml
+
+# project
 site/static/*.css
 site/static/*.js
 site/static/css/*.css
