@@ -1,6 +1,8 @@
 # `www.imscraping.ninja` website code
 
-![](https://cdn.rawgit.com/aleen42/badges/master/src/eslint.svg) ![](https://cdn.rawgit.com/aleen42/badges/master/src/webpack.svg) [![](https://cdn.rawgit.com/aleen42/badges/master/src/telegram.svg)]((https://t.me/istinspring))
+![](https://cdn.rawgit.com/aleen42/badges/master/src/eslint.svg) ![](https://cdn.rawgit.com/aleen42/badges/master/src/webpack.svg) ![](https://img.shields.io/badge/html-ok-yellowgreen.svg) ![](https://img.shields.io/badge/markup-markdown-brightgreen.svg)
+
+Contacts: [![](https://cdn.rawgit.com/aleen42/badges/master/src/telegram.svg)](https://t.me/istinspring) [![](https://cdn.rawgit.com/aleen42/badges/master/src/skype.svg)](skype:etiquette\_team?chat)
 
 Personal website build with `HTML/SCSS/RiotJS/Webapack` using [Hugo](https://gohugo.io) static site generator.
 
