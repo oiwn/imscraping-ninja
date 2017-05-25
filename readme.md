@@ -1,21 +1,14 @@
-# imscraping.ninja website code
+# www.imscraping.ninja website code
 
-!(https://david-dm.org/istinspring/imscraping-ninja.svg)
+![](https://cdn.rawgit.com/aleen42/badges/master/src/eslint.svg) ![](https://cdn.rawgit.com/aleen42/badges/master/src/webpack.svg) [![](https://cdn.rawgit.com/aleen42/badges/master/src/telegram.svg)]((https://t.me/istinspring))
 
-[web scraping service](http://imscraping.ninja)
 
-Static website build with ~~HTML/LESS/AngularJS~~ ReactJS using ~~gulp~~ webpack.
+[web scraping service](http://www.imscraping.ninja)
 
-# How To Use
+Personal website build with `HTML/SCSS/RiotJS/Webapack` using [Hugo](https://gohugo.io) static site generator.
 
-Setup project environment
+In this version i decided to give Material Components Web a try, since they're not bind to any framework and 
+use Yandex's BEM for tagging it was very easy to integrate them into the existed templates. Also Hugo is awesome!
 
-  + ```npm install```
+Deployed on: [![](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
 
-Develop
-
-  + ```npm start```
-
-Deploy
-
-well, it's complicated. trying openshift for now.
