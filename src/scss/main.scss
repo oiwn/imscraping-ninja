@@ -1,0 +1,77 @@
+@import 'reset';
+@import 'variables';
+/* Modules */
+// @import "mdc-animation";
+@import 'typography/mdc-typography';
+@import 'layout-grid/mdc-layout-grid';
+@import 'card/mdc-card';
+// @import "elevation/mdc-elevation";
+// @import "@material/ripple/mixins";
+
+/* Project modules */
+@import 'containers/content.scss';
+@import 'containers/header.scss';
+@import 'containers/footer.scss';
+
+
+body {
+  font: 100% $font-stack;
+  font-size: $font-size;
+  font-weight: $font-width;
+  background-color: $dark-background-color;
+}
+
+main {
+  padding: 1em 0 0.4em;
+  background-color: $light-background-color;
+}
+
+div.service-information {
+  text-align: center;
+  color: rgba(0,0,0,0.9);
+
+  div.service-description {
+    h2.service-description__title {
+      font-size: 2.2em;
+      padding-bottom: 0.2em;
+    }
+    span.service-description__byline {
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.1em;
+      color: #6F6F6F;
+    }
+  }
+
+  div.service-description-text {
+    font-size: $font-size;
+
+    div.content-box {
+      padding: 0.4em 0;
+    }
+
+    p {
+      padding: 0.4em;
+      color: #333;
+    }
+
+    div.contact-callout {
+      a.contact-callout__link {
+        overflow: hidden;
+        display: inline-block;
+        padding: 0.8em;
+        font-size: $font-size;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #666;
+        background-color: #FF6816;
+        letter-spacing: 0.1em;
+        line-height: 1.4em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+}

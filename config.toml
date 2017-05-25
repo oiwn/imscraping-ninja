@@ -1,0 +1,24 @@
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# directories
+archetypeDir = "site/archetypes"
+dataDir = "site/data"
+contentDir = "site/content"
+staticDir = "site/static"
+layoutDir = "site/layouts"
+publishDir = "build"
+
+# site
+languageCode = "en"
+baseURL = "http://www.imscraping.ninja/"
+title = "Web Scraping and Data Mining Service"
+
+[menu]
+  [[menu.header]]
+    name = "Tech"
+    weight = 1
+    url = "/tech/"
+  [[menu.header]]
+    name = "Services"
+    weight = 2
+    url = "/services/"

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__cell--span-1"></div>
+  <div class="mdc-layout-grid__cell--span-10 ">
+    <div class="page-content">
+      {{ range .Pages }}
+      <div class="mdc-card">
+        <section class="mdc-card__primary">
+          <h1 class="mdc-card__title mdc-card__title--large">{{.Title}}</h1>
+          <h2 class="mdc-card__subtitle">{{.Params.description}}</h2>
+        </section>
+        <section class="mdc-card__supporting-text">
+          {{.Content}}
+        </section>
+        <section class="mdc-card__actions">
+          <button class="mdc-button mdc-button--compact mdc-card__action">Final result: {{.Params.final_result}}</button>
+          <button class="mdc-button mdc-button--compact mdc-card__action">Pages crawled: {{.Params.pages_crawled}}</button>
+        </section>
+      </div>
+      {{end}}
+    </div>
+  </div>
+  <div class="mdc-layout-grid__cell--span-1"></div>
+</div>
+{{ end }}

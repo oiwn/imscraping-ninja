@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    <meta name="keywords" content="web scraping, data processing, rest api, machine learning">
+    <meta name="description" content="my personal web scraping service">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="2drxWpOVZNvUU-ODHwM8ffKbXy3vH41YYfVnudIE8wM" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/bundle.css">
+  </head>
+  <body class="mdc-typography">
+    <!-- Header  -->
+    <header>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__cell--span-12">
+          {{ partial "nav.html" . }}
+          <div class="title-box">
+            <h1>Web Scraping Service</h1>
+            <span>by GrabLab</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      {{ block "main" . }}Content{{ end }}
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__cell--span-12">
+          <div class="footer-callout-box">
+            <h3>Email me and describe your problem!</h3>
+            <span>
+              I'll review it and response with solution.
+            </span>
+          </div>
+          <p class="footer-copyright">
+            &copy; imWebScraping.ninja 2008-2017. All rights reserved.
+            Dev by <a href="http://grablab.org/">GrabLab</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/bundle.js"></script>
+</html>

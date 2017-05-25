@@ -1,0 +1,38 @@
+@import '../_variables';
+
+
+footer {
+  padding: 1em 0 0.6em;
+  background-color: $dark-background-color;
+  text-align: center;
+
+  div[class*="grid"] {
+    margin: 0 0;
+  }
+
+  .footer-callout-box {
+    h3 {
+      font-size: 2.4em;
+      color: rgba(255,255,255,0.9);
+      padding-bottom: 0.4em;
+    }
+    span {
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      color: #6F6F6F;
+    }
+  }
+
+  .footer-copyright {
+    padding: 0.8em 0;
+    font-size: 0.80em;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+  }
+}
