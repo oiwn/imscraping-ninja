@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__cell--span-1"></div>
+  <div class="mdc-layout-grid__cell--span-10 ">
+    <div class="page-content">
+      {{ range .Pages }}
+      <div class="mdc-card">
+        <section class="mdc-card__primary">
+          <a href="{{.URL}}">
+            <h1 class="mdc-card__title mdc-card__title--large">{{.Title}}</h1>
+          </a>
+          <h2 class="mdc-card__subtitle">{{.Params.description}}</h2>
+        </section>
+      </div>
+      {{end}}
+    </div>
+  </div>
+  <div class="mdc-layout-grid__cell--span-1"></div>
+</div>
+{{ end }}

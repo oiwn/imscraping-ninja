@@ -3,13 +3,14 @@ title = "Home"
 date = "2017-04-09"
 menu = "main"
 +++
-Web scraping also referencing as "web harvesting" or "web data extraction" is a
-technique to extract valuable information from the various sources in structured
-form suited for the further usage. In other words my main fields of work are
-web robots, data processing systems, REST services and SPA dashboards.
+Web scraping, also referred to as “web harvesting” or “web data extraction," is
+a technique to extract valuable information from the various sources in
+structured form suited for the further usage.
 
-**Feel free to review <a href="/tech/">my technologies stack</a> and
-<a href="/projects/">list of completed / ongoing projects</a>.**
+My typical projects involve the creation of web robots, data processing systems,
+REST services and SPA dashboards.
 
-I'm using most bleeding edge technologies to archieve best results possible and
-high productivity.
+I use the best available technologies to achieve quality results for my clients.
+
+**Feel free to review the typical [technologies](/tech/) I work with and
+a [list of projects](/projects/) I've worked on.**

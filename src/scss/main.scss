@@ -4,6 +4,7 @@
 // @import "mdc-animation";
 @import 'typography/mdc-typography';
 @import 'layout-grid/mdc-layout-grid';
+@import 'button/mdc-button';
 @import 'card/mdc-card';
 // @import "elevation/mdc-elevation";
 // @import "@material/ripple/mixins";
@@ -24,6 +25,13 @@ body {
 main {
   padding: 1em 0 0.4em;
   background-color: $light-background-color;
+
+  .highlight {
+    padding: 0.6em;
+    margin-bottom: 0.8em;
+    width: 100%;
+    word-wrap: break-word;
+  }
 }
 
 div.service-information {

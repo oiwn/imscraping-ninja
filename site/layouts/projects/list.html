@@ -7,14 +7,15 @@
       <div class="mdc-card">
         <section class="mdc-card__primary">
           <h1 class="mdc-card__title mdc-card__title--large">{{.Title}}</h1>
-          <h2 class="mdc-card__subtitle">{{.Params.description}}</h2>
+          <!-- <h2 class="mdc-card__subtitle">{{.Params.description}}</h2> -->
         </section>
         <section class="mdc-card__supporting-text">
-          {{.Content}}
+          <p class="mdc-card__subtitle">{{.Params.description}}</p>
         </section>
         <section class="mdc-card__actions">
-          <button class="mdc-button mdc-button--compact mdc-card__action">Final result: {{.Params.final_result}}</button>
-          <button class="mdc-button mdc-button--compact mdc-card__action">Pages crawled: {{.Params.pages_crawled}}</button>
+          <button class="mdc-button mdc-button--flat mdc-button--compact mdc-card__action">Final result: {{.Params.final_result}}</button>
+          <button class="mdc-button mdc-button--flat mdc-button--compact mdc-card__action">Pages crawled: {{.Params.pages_crawled}}</button>
+          <a href="{{.URL}}" class="mdc-button mdc-button--primary mdc-button--raised mdc-button--compact mdc-card__action project-read-more">Read more...</a>
         </section>
       </div>
       {{end}}

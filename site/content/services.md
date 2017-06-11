@@ -4,27 +4,46 @@ subtitle = "projects i looking for"
 date = "2014-04-09"
 menu = "main"
 +++
-I'm interesting in semi-long term projects with 1-3 people involved.
+I have more than 6 years of experience in both consulting and developing
+libraries for web scraping. I consistently help save my clients time and money.
 
-## Rate per hour - $35/h
+## Rate per hour $40/h
 
-**Consulting**, more than 6 years of experience in web scraping, and could provide advices and solutions which will save a lot of money for you.
+I am interested in the following projects:
 
-**Code rewiew** review your code, advise how you can improve it.
+Semi-long term projects where 1-3 people are involved (who are ideally familiar
+with agile development practices).
 
-## Development
 
-**Large websites crawling** - scrape millions of pages from website like Amazon, Yelp, AngelList.
+### Code review:
 
-**Price comparsion systems development**. Regular cawling of few sources to extract, transform and load valuable data into the database.
+I can review your code and assist you with improvements.
 
-**REST APIs development** - build api on top of your data
+### Web Scraping:
 
-**Data processing and Machine Learning** - build data processing pipelines,
-complex data aggregation pipelines, data normalization and load large volumes
-of unstructured data into the appropriate storage solutions.
+Large website crawling - I can scrape millions of pages from website like
+Amazon, Yelp, AngelList.
 
-**Dashboards** in form of Single Page Application, to control the process of
-crawling and data processing.
+
+### Development:
+
+Price comparison systems development. This consists of the regular crawling of
+few sources to extract data, transforming the data and finally loading the data
+of interest into a database.
+
+### REST API Development:
+
+I can build an api on top of your data.
+
+### Data processing and Machine Learning:
+
+I can build data processing pipelines, complex data aggregation pipelines,
+normalize data and load large volumes of unstructured data into the appropriate
+storage solutions.
+
+### Dashboard Creation:
+
+I ca0n form a single page application to control the process of crawling and
+processing data.
 
 [Check the list of my projects for details](/projects/)

@@ -1,4 +1,16 @@
-disableKinds = ["taxonomy", "taxonomyTerm"]
+# default lanugage
+languageCode = "en-us"
+defaultContentLanguage = "en"
+
+# disable RSS
+disableRSS = true
+
+# Highlight
+PygmentsCodeFences = true
+pygmentsstyle = "emacs"
+
+# don't need yet
+disableKinds = ["taxonomy", "taxonomyTerm", "category", "tag"]
 
 # directories
 archetypeDir = "site/archetypes"
@@ -9,7 +21,6 @@ layoutDir = "site/layouts"
 publishDir = "build"
 
 # site
-languageCode = "en"
 baseURL = "http://www.imscraping.ninja/"
 title = "Web Scraping and Data Mining Service"
 
@@ -22,3 +33,11 @@ title = "Web Scraping and Data Mining Service"
     name = "Services"
     weight = 2
     url = "/services/"
+  [[menu.header]]
+    name = "Projects"
+    weight = 3
+    url = "/projects/"
+  [[menu.header]]
+    name = "Posts"
+    weight = 4
+    url = "/posts/"

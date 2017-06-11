@@ -1,5 +1,4 @@
 const path = require('path');
-const glob = require('glob');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
@@ -7,18 +6,14 @@ const CSS_LOADER_CONFIG = [
   {
     loader: 'css-loader',
     options: {
-      sourceMap: true,
+      sourceMap: true
     },
   },
   {
     loader: 'sass-loader',
     options: {
       sourceMap: true,
-      includePaths: ['node_modules', 'node_modules/@material', './src/scss'],
-      // includePaths: ['node_modules', 'node_modules/@material/*']
-      //   .map((d) => path.join(__dirname, d))
-      //   .map((g) => glob.sync(g))
-      //   .reduce((a, c) => a.concat(c), [path.resolve(__dirname, 'src/scss')])
+      includePaths: ['node_modules', 'node_modules/@material', './src/scss']
     }
   }
 ];

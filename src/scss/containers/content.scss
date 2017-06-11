@@ -1,6 +1,16 @@
 @import 'list/mdc-list';
+@import "elevation/mixins";
 
-div.page-content {
+
+.mdc-card {
+  margin-bottom: 1em;
+}
+
+.mdc-card__actions .mdc-card__action:last-child {
+  margin-left: auto;
+}
+
+.page-content {
   text-align: center;
   color: rgba(0,0,0,0.9);
   h2[class^="mdc-typography"] {
@@ -18,8 +28,30 @@ div.page-content {
 
   div.content-box {
     margin-top: 2em;
+    text-align: left;
 
-    article.better-markdown {
+    .content-box__counters {
+      font-size: 1.4em;
+      padding-bottom: 4px;
+      @include mdc-elevation(2);
+      margin: 0 0 0 auto;
+      width: 60%;
+
+      ul {
+        @extend .mdc-list;
+        list-style-type: square;
+        margin: 0.4em 0;
+
+        li {
+          @extend .mdc-list-item;
+          margin-left: 2em;
+          height: 24px;
+          display: list-item;
+        }
+      }
+    }
+
+    .better-markdown {
       text-align: left;
       justify-content: space-between;
       font-size: 1.4em;
