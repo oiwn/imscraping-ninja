@@ -1,6 +1,11 @@
 #+TITLE: Notes and ToDos
 
 * Microtasks - any small things here
+** DONE Update material-web-components, fix scss compiling
+   CLOSED: [2018-02-21 Wed 23:48]
+** DONE Unable to compole site scss with material-web-components styles
+   CLOSED: [2018-02-21 Wed 23:48]
+** TODO Look into typography on main page, it looks ugly!
 ** TODO Remove stupid white shade from current element on top navigation
 ** TODO Add tawk.to live chat to the site!
 ** DONE Remove old commands from Makefile and add new for render/deploy and start

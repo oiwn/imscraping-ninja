@@ -1,34 +1,33 @@
 {{ define "main" }}
 <div class="mdc-layout-grid">
-  <div class="mdc-layout-grid__cell--span-1"></div>
-  <div class="mdc-layout-grid__cell--span-10">
-    <div class="service-information"
+  <div class="mdc-layout-grid__cell">
+    <div class="hero">
+      <div class="service-information"
          itemscope itemtype="http://schema.org/Organization">
 
-      <div class="service-description">
-        <h2 class="service-description__title">
-          <span itemprop="name">Data scraping from APIs and Web Sites</span>
-        </h2>
-        <span class="service-description__byline" itemprop="description">
-          api data aggregation, price comparison, data analysis
-        </span>
-      </div>
-
-      <div class="service-description-text">
-        <div class="content-box">
-          {{.Content}}
+        <div class="service-description">
+          <h2 class="service-description__title">
+            <span itemprop="name">Data scraping from APIs and Web Sites</span>
+          </h2>
+          <span class="service-description__byline" itemprop="description">
+            api data aggregation, price comparison, data analysis
+          </span>
         </div>
 
-        <div class="contact-callout">
-          <a href="mailto:alex@imscraping.ninja" class="contact-callout__link">
-            Contact Me<br>
-            <span itemprop="email">alex@imscraping.ninja</span>
-          </a>
+        <div class="service-description-text">
+          <div class="content-box">
+            {{.Content}}
+          </div>
+
+          <div class="contact-callout">
+            <a href="mailto:alex@imscraping.ninja" class="contact-callout__link">
+              Contact Me<br>
+              <span itemprop="email">alex@imscraping.ninja</span>
+            </a>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
-  <div class="mdc-layout-grid__cell--span-1"></div>
 </div>
 {{ end }}

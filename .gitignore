@@ -26,8 +26,8 @@ node_modules/
 # project
 site/static/*.css
 site/static/*.js
-site/static/css/*.css
-site/static/js/*.js
+site/static/*.css.map
+site/static/*.js.map
 build/
 tmp/
 .tmux.yaml
