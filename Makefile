@@ -1,6 +1,9 @@
-# shortcuts
-sss:
-	cd build/ && python -m SimpleHTTPServer 3000
+.PHONY: start deploy
+
+start:
+	hugo server -w
 
 deploy:
-	npm run build && surge ./build --domain guttural-balloon.surge.sh
+	hugo && netlify deploy
+
+# npm run build && surge ./build --domain guttural-balloon.surge.sh

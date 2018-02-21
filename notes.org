@@ -1,0 +1,7 @@
+#+TITLE: Notes and ToDos
+
+* Microtasks - any small things here
+** TODO Remove stupid white shade from current element on top navigation
+** TODO Add tawk.to live chat to the site!
+** DONE Remove old commands from Makefile and add new for render/deploy and start
+   CLOSED: [2018-02-21 Wed 16:19]
