@@ -1,6 +1,9 @@
 #+TITLE: Notes and ToDos
 
 * Microtasks - any small things here
+** Fix skype link on github
+** DONE Add stickers for contacs: email, skype, telegram on front page
+   CLOSED: [2018-02-22 Thu 02:06]
 ** DONE Rewrite templates to hugo's -baseof
    CLOSED: [2018-02-22 Thu 01:29]
 ** DONE Remove padding for page header/content/footer segments

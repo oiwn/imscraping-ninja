@@ -1,9 +1,9 @@
 .PHONY: start deploy
 
 start:
-	hugo server -w
+	npm start
 
 deploy:
-	hugo && netlify deploy
+	npm build && hugo && netlify deploy
 
 # npm run build && surge ./build --domain guttural-balloon.surge.sh

@@ -36,6 +36,7 @@
           overflow: hidden;
           display: inline-block;
           padding: 0.8em;
+          margin-top: 0.6em;
           font-size: $font-size;
           border-radius: 10px;
           box-shadow: 2px 2px 10px #666;
@@ -47,6 +48,27 @@
           font-weight: 600;
           color: #333;
         }
+      }
+
+      div.contact-additional {
+        margin-top: 1.6em;
+
+        a {
+          display: inline-block;
+          text-align: center;
+          text-decoration: none;
+
+          span {
+            display: inline-block;
+            text-align: center;
+
+            img {
+              height: 22px;
+              vertical-align: bottom;
+            }
+          }
+        }
+
       }
     }
   }
