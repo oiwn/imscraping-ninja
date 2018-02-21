@@ -5,3 +5,5 @@ description = "scraping of booking.com hotels across few locations"
 pages_crawled = 228000
 final_result = "SQL database dump"
 +++
+
+Extract data about prices of hotels available on booking.com website.

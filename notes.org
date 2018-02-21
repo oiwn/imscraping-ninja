@@ -1,12 +1,18 @@
 #+TITLE: Notes and ToDos
 
 * Microtasks - any small things here
+** DONE Rewrite templates to hugo's -baseof
+   CLOSED: [2018-02-22 Thu 01:29]
+** DONE Remove padding for page header/content/footer segments
+   CLOSED: [2018-02-21 Wed 23:54]
 ** DONE Update material-web-components, fix scss compiling
    CLOSED: [2018-02-21 Wed 23:48]
 ** DONE Unable to compole site scss with material-web-components styles
    CLOSED: [2018-02-21 Wed 23:48]
 ** TODO Look into typography on main page, it looks ugly!
-** TODO Remove stupid white shade from current element on top navigation
-** TODO Add tawk.to live chat to the site!
+** DONE Remove stupid white shade from current element on top navigation
+   CLOSED: [2018-02-22 Thu 01:29]
+** DONE Add tawk.to live chat to the site!
+   CLOSED: [2018-02-22 Thu 01:29]
 ** DONE Remove old commands from Makefile and add new for render/deploy and start
    CLOSED: [2018-02-21 Wed 16:19]
