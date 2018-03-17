@@ -26,8 +26,12 @@
         <div class="mdc-layout-grid__cell--span-12">
           {{ partial "nav.html" . }}
           <div class="title-box">
+            {{if and (in .Page.URL "/posts/") (ne .Page.URL "/posts/")}}
+            <span></span>
+            {{else}}
             <h1>Web Scraping Service</h1>
             <span>by GrabLab</span>
+            {{end}}
           </div>
         </div>
       </div>
