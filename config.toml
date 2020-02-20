@@ -24,6 +24,10 @@ publishDir = "build"
 baseURL = "http://www.imscraping.ninja/"
 title = "Web Scraping and Data Mining Service"
 
+# misc
+googleAnalytics = "UA-62006263-1"
+
+# menu
 [menu]
   [[menu.header]]
     name = "Tech"

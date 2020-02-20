@@ -1,12 +1,15 @@
-<nav class="top-nav">
-  <ul class="top-nav__list">
-		<li class='top-nav__item {{if eq .Page.URL "/"}}top-nav__item-active{{end}}'>
-			<a class="top-nav__link" href="/">Home</a>
+<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+  <ul class="flex">
+		<li class='mr-6'>
+			<a class="link" href="/">Home</a>
 		</li>
 		{{ range .Site.Menus.header }}
-		<li class="top-nav__item {{if in $.URL .URL}}top-nav__item-active{{end}}">
-			<a class="top-nav__link" href="{{.URL}}">{{.Name}}</a>
+		<li class="mr-6">
+			<a href="{{.URL}}">{{.Name}}</a>
 		</li>
 		{{end}}
   </ul>
+  <div>
+    <h1 class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Web Scraping Service</h1>
+  </div>
 </nav>
