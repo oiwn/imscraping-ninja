@@ -1,4 +1,7 @@
-.PHONY: start deploy
+.PHONY: server start deploy
+
+server:
+	hugo server -D
 
 start:
 	npm start
