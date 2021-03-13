@@ -19,28 +19,22 @@
   <body>
     <!-- Header  -->
     <header>
-      <div class="bg-gray-900">
-        {{ partial "nav.html" . }}
-      </div>
+      {{ partial "nav.html" . }}
     </header>
     <!-- Main -->
     <main>
       {{ block "main" . }}Content{{ end }}
     </main>
     <!-- Footer -->
-    <footer>
-      <div class="mdc-layout-grid">
-        <div class="mdc-layout-grid__cell--span-12">
-          <div class="footer-callout-box">
-            <h3>Email me and describe your problem!</h3>
-            <span>
-              I'll review it and response with solution.
-            </span>
-          </div>
-          <p class="footer-copyright">
-            &copy; imscraping.ninja 2008-2020. All rights reserved.
-          </p>
-        </div>
+    <footer class="bg-gray-800">
+      <div class="mx-auto p-4 text-center text-white">
+        <h3 class="text-white">Email me and describe your problem!</h3>
+        <span>
+          I'll review it and response with solution.
+        </span>
+        <p>
+          &copy; imscraping.ninja 2008-2020. All rights reserved.
+        </p>
       </div>
     </footer>
     {{ template "_internal/google_analytics_async.html" . }}

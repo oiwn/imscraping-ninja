@@ -20,4 +20,4 @@ windows:
     start-directory: ./
     panes:
       - shell_command:
-          - mc
+          - clear

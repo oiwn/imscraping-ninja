@@ -2,3 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Example how to add default style
+@layer base {
+  ul {
+    @apply list-disc;
+  }
+}
+*/
