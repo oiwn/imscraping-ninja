@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>{{ section.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/superkube@latest/dist/superkube.min.css" type="text/css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="navbar bg-dark hidden-sm">
+      <div class="navbar-container container centered edges">
+        <div class="navbar-brand">
+          <a href="/" class="brand">Web Scraping</a>
+        </div>
+
+        <div class="navbar-nav flex-auto">
+          <nav class="nav nav-centered nav-light nav-semibold">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+
+              <li class="nav-item"><a href="#" class="nav-link">Tech</a></li>
+
+              <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+
+              <li class="nav-item"><a href="#" class="nav-link">Posts</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="navbar-action ml-5">
+          <a href="#" class="button button-light-outline button-small button-round">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar bg-dark visible-sm">
+      <div class="navbar-container container centered edges">
+        <div class="navbar-brand">
+          <a href="#" class="brand">Web Scraping</a>
+        </div>
+
+        <div class="navbar-trigger push-right">
+          <a href="#" class="link-light link-ghost"><span>Menu</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-navbar visible-sm b-top b-light-low bg-dark p-4">
+      <div class="mobile-navbar-menu">
+        <nav class="menu menu-light">
+          <ul class="menu-list">
+            <li class="menu-item"><a href="#" class="menu-link">Tech</a></li>
+
+            <li class="menu-item"><a href="#" class="menu-link">Services</a></li>
+
+            <li class="menu-item"><a href="#" class="menu-link">Posts</a></li>
+
+            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">{% block content %}{% endblock %}</main>
+
+  <footer class="footer mt-4 mb-8">
+    <div class="footer-container container centered edges grid">
+      <div class="footer-copy column column-6">
+        <p class="text-small text-dark-medium">© Grablab, 2022</p>
+      </div>
+
+      <div class="footer-nav column column-6 flex">
+        <nav class="nav nav-small nav-right nav-left-sm push-right push-right-off-sm">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
