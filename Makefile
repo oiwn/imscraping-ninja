@@ -1,10 +1,7 @@
-.PHONY: server start deploy
+.PHONY: server deploy
 
 server:
 	zola serve
 
-start:
-	npm start
-
 deploy:
-	npm build && hugo && netlify deploy
+	zola build && netlify deploy --dir public --prod
