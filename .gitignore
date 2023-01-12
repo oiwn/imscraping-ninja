@@ -24,6 +24,7 @@ node_modules/
 .tmuxp.yaml
 
 # project
+/public
 /trash
 site/static/*.css
 site/static/*.js
