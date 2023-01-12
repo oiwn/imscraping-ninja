@@ -24,6 +24,7 @@ node_modules/
 .tmuxp.yaml
 
 # project
+/trash
 site/static/*.css
 site/static/*.js
 site/static/*.css.map
@@ -31,3 +32,4 @@ site/static/*.js.map
 build/
 tmp/
 .tmux.yaml
+resources/_gen/

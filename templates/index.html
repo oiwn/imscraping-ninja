@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home-unit">
+    <h1>Web Scraping</h1>
+      <p>
+        Hi, i'm doing web scraping on professional basis.
+        See my <a href="#">CV here</a>
+      </p>
+      <ul>
+        <li>Rust and Python languages</li>
+        <li>Messages and storage with MongoDB, Redis and gRPC</li>
+      </ul>
+{{ section.content | safe }}
+</div>
+{% endblock %}

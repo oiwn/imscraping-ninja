@@ -1,28 +1,10 @@
 #+TITLE: Notes and ToDos
 
 * Microtasks - any small things here
-** Remove too much bombastic header from /posts/
-** DONE Set width for images inside article block (100%)
-   CLOSED: [2018-02-22 Thu 17:18]
-** TODO Fix skype link on github
-** TODO Look into typography on main page, it looks ugly!
-** DONE Add stickers for contacs: email, skype, telegram on front page
-   CLOSED: [2018-02-22 Thu 02:06]
-** DONE Rewrite templates to hugo's -baseof
-   CLOSED: [2018-02-22 Thu 01:29]
-** DONE Remove padding for page header/content/footer segments
-   CLOSED: [2018-02-21 Wed 23:54]
-** DONE Update material-web-components, fix scss compiling
-   CLOSED: [2018-02-21 Wed 23:48]
-** DONE Unable to compole site scss with material-web-components styles
-   CLOSED: [2018-02-21 Wed 23:48]
-** DONE Remove stupid white shade from current element on top navigation
-   CLOSED: [2018-02-22 Thu 01:29]
-** DONE Add tawk.to live chat to the site!
-   CLOSED: [2018-02-22 Thu 01:29]
-** DONE Remove old commands from Makefile and add new for render/deploy and start
-   CLOSED: [2018-02-21 Wed 16:19]
-
+** use internal template for google analytics
+** remove unnecessary nesting for folder
+** make basic markup for pages
+** make tailwindcss pipeline work
 * Articles
 ** About grab scrapers starter script
    (click + wrapper to run spider with resonable defaults)

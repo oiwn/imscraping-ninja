@@ -5,7 +5,7 @@ windows:
     start-directory: ./
     panes:
       - shell_command:
-          - emacs
+          - nvim
   - window_name: cmd
     start-directory: ./
     panes:
@@ -20,4 +20,4 @@ windows:
     start-directory: ./
     panes:
       - shell_command:
-          - mc
+          - clear
