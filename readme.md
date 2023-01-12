@@ -1,6 +1,6 @@
 # `www.imscraping.ninja` website code
 
-![](https://cdn.rawgit.com/aleen42/badges/master/src/eslint.svg) ![](https://cdn.rawgit.com/aleen42/badges/master/src/webpack.svg) ![](https://img.shields.io/badge/html-ok-yellowgreen.svg) ![](https://img.shields.io/badge/markup-markdown-brightgreen.svg)
+![](https://img.shields.io/badge/html-ok-yellowgreen.svg) ![](https://img.shields.io/badge/markup-markdown-brightgreen.svg)
 
 Personal website build with `HTML/PureCSS` using [Zola](https://www.getzola.org) static site generator.
 
