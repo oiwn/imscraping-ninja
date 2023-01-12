@@ -1,7 +1,7 @@
 .PHONY: server start deploy
 
 server:
-	hugo server -D
+	zola serve
 
 start:
 	npm start

@@ -1,5 +1,6 @@
 +++
 title = "Posts"
 date = "2022-04-09"
-menu = "posts"
 +++
+
+Thoughts and notes about web scraping.
