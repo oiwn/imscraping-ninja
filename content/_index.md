@@ -2,13 +2,23 @@
 title = "Home"
 date = "2017-04-09"
 +++
-Web scraping, also referred to as “web harvesting” or “web data extraction," is
-a technique to extract valuable information from the various sources in
-structured form suited for the further usage.
+Web scraping, also known as "web harvesting" or "web data extraction," is a
+method used to extract valuable information from diverse sources in a structured
+format, making it suitable for further utilization.
 
-My typical projects involve the creation of web robots, data processing systems,
-REST services and SPA dashboards.
+My typical projects encompass the development of web robots, data processing
+systems, REST services, and SPA dashboards.
 
-I use the best available technologies to achieve quality results for my clients.
+- Collecting data to train domain specific llms.
+- Collecting data for vairous kind of AI systems.
 
-**Feel free to review [the CV](/cv/) and read [some post](/posts/).**
+I employ cutting-edge technologies to ensure top-notch results for my clients.
+
+Projects: 
+
+- Rust implementation of Fei Sun, Dandan Song and Lejian Liao paper 
+  *Content Extraction via Text Density (CETD)* 
+  [https://github.com/oiwn/dom-content-extraction](https://github.com/oiwn/dom-content-extraction)
+
+- Rust implementation of Stochastic Room Impulse Response Generation.
+  [https://github.com/oiwn/stoRIR-rs](https://github.com/oiwn/stoRIR-rs)
