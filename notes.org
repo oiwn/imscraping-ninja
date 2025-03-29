@@ -13,45 +13,7 @@
 ** How to use bloom filter and why.
    Better duplicates skipping using bloom-filter. for very large amount of pages
 *** Memory allocation for objects
-    In [9]: values = ["1", "2", "3", "4", "5"]
 
-    In [10]: set_of_values = set(values)
-
-    In [11]: print(set_of_values)
-    {'3', '4', '1', '5', '2'}
-
-    In [14]: set_of_hashes = set(list(map(lambda x: sha1(x.encode('utf-8')).hexdigest(), values)))
-
-    In [15]: print(set_of_hashes)
-    {'77de68daecd823babbb58edb1c8e14d7106e83bb', '1b6453892473a467d07372d45eb05abc2031647a', 'da4b9237bacccdf19c0760cab7aec4a8359010b0', '356a192b7913b04c54574d18c28d46e6395428ab', 'ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4'}
-
-    In [16]: sys.getsizeof(set_of_values)
-    Out[16]: 736
-
-    In [17]: sys.getsizeof(set_of_hashes)
-    Out[17]: 736
-
-    In [25]: from random import randint
-
-    In [26]: large_set = set([str(randint(1, 100)) for _ in range(0, 1000)])
-
-    In [27]: sys.getsizeof(large_set)
-    Out[27]: 8416
-
-    In [28]: large_set = set([str(randint(1, 100)) for _ in range(0, 100000)])
-
-    In [29]: sys.getsizeof(large_set)
-    Out[29]: 8416
-
-    In [30]: large_set = set([str(randint(1, 100)) for _ in range(0, 10000000)])
-
-    In [31]: sys.getsizeof(large_set)
-    Out[31]: 8416
-
-    In [32]: large_set = set([str(randint(1, 1000000)) for _ in range(0, 100000)])
-
-    In [33]: sys.getsizeof(large_set)
-    Out[33]: 4194528
 ** Practical examples of mongodb aggregation framework
 *** Groupby and count
     ```

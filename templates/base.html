@@ -4,45 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="KGrdXDKiqqHg93kix1ByT2oXJi-axmuq2MzK1CvqglM" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-  <style>
-    .content {
-        padding: 1em 1em 1em;
-    }
-    .center {
-      justify-content: center;
-    }
-    pre[class*="language-"] {
-      padding: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
 </head>
 
 <body>
-  <header class="header">
-    <div class="pure-g">
-      <div class="pure-menu pure-menu-horizontal">
-        <a href="/" class="pure-menu-heading pure-menu-link">Home</a>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item">
-              <a href="/posts" class="pure-menu-link">Posts</a>
-          </li>
-          <li class="pure-menu-item">
-              <a href="/cv" class="pure-menu-link">CV</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong>Data Engeneer</strong></li>
+      </ul>
+      <ul>
+        <li><a href="/" class="contrast"><strong>Home</strong></a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/cv">CV</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="pure-g">
-    <div class="pure-u-1-1 content">{% block content %}{% endblock %}</div>
+  <main class="container">
+    {% block content %}{% endblock %}
   </main>
 
-  <footer class="pure-g">
-    <div class="pure-u-1-1">
-      <p align="center">© oiwn, 2023</p>
-    </div>
+  <footer class="container">
+    <small>© oiwn, {{ now(format="%Y") }}</small> 
   </footer>
 </body>
 </html>

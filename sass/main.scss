@@ -1,0 +1,67 @@
+.container {
+  --block-spacing-vertical: 0.5rem; 
+  padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+}
+
+header.container {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--card-border-color);
+}
+
+main.container {
+  padding-top: 1rem;
+}
+
+// Improve article spacing
+article {
+  margin-bottom: 1.5rem;
+  
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+// Better grid layout for projects
+.grid {
+  gap: 1.5rem;
+  
+  article {
+    margin: 0;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+    
+    footer {
+      margin-top: auto;
+    }
+  }
+}
+
+// Improve list styling
+ul {
+  margin-bottom: 1.5rem;
+  
+  li {
+    margin-bottom: 0.3rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  header.container nav {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    ul:first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

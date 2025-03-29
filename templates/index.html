@@ -1,16 +1,61 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="home-unit">
-    <h1>Web Scraping</h1>
-      <p>
-        Hi, i'm doing web scraping on professional basis.
-        See my <a href="#">CV here</a>
-      </p>
-      <ul>
-        <li>Rust and Python languages</li>
-        <li>Messages and storage with MongoDB, Redis and gRPC</li>
-      </ul>
-{{ section.content | safe }}
+<article>
+  <header>
+    <h1>Web Scraping Specialist</h1>
+    <p>I specialize in web scraping on a professional basis. <a href="/cv">View my CV</a> for more details.</p>
+  </header>
+  
+  <ul>
+    <li>Rust and Python languages</li>
+    <li>Messages and storage with MongoDB, Redis and gRPC</li>
+  </ul>
+</article>
+
+<div class="grid">
+  <!-- Project Card 1 -->
+  <article>
+    <header>
+      <h3>Project 1</h3>
+    </header>
+    <p>Description of project 1 goes here.</p>
+    <footer>
+      <details>
+        <summary>Technologies</summary>
+        <p>Rust, MongoDB</p>
+      </details>
+    </footer>
+  </article>
+  
+  <!-- Project Card 2 -->
+  <article>
+    <header>
+      <h3>Project 2</h3>
+    </header>
+    <p>Description of project 2 goes here.</p>
+    <footer>
+      <details>
+        <summary>Technologies</summary>
+        <p>Python, Redis</p>
+      </details>
+    </footer>
+  </article>
+  
+  <!-- Project Card 3 -->
+  <article>
+    <header>
+      <h3>Project 3</h3>
+    </header>
+    <p>Description of project 3 goes here.</p>
+    <footer>
+      <details>
+        <summary>Technologies</summary>
+        <p>Rust, gRPC</p>
+      </details>
+    </footer>
+  </article>
 </div>
+
+{{ section.content | safe }}
 {% endblock %}

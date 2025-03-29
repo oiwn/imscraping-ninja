@@ -1,6 +1,5 @@
 +++
 title = "Home"
-date = "2017-04-09"
 +++
 Web scraping, also known as "web harvesting" or "web data extraction," is a
 method used to extract valuable information from diverse sources in a structured

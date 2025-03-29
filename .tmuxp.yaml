@@ -1,23 +1,23 @@
-session_name: imscrapingninja
+session_name: imscraping-blog
+shell_command_before: "export RUST_LOG=info"
 windows:
   - window_name: code
     focus: true
     start-directory: ./
     panes:
       - shell_command:
-          - nvim
-  - window_name: cmd
+        - helix
+  - window_name: cmd1
     start-directory: ./
     panes:
       - shell_command:
-          - clear
-  - window_name: srv
+        - clear
+  - window_name: cmd2
     start-directory: ./
     panes:
       - shell_command:
-          - clear
-  - window_name: dir
-    start-directory: ./
+        - clear
+  - window_name: notes
     panes:
       - shell_command:
-          - clear
+        - emacs -nw notes.org

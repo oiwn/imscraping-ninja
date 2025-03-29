@@ -34,3 +34,7 @@ build/
 tmp/
 .tmux.yaml
 resources/_gen/
+
+# misc
+.amc.toml
+.code
