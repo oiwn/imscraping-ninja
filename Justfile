@@ -1,5 +1,3 @@
-.PHONY: server deploy
-
 server:
 	zola serve
 
