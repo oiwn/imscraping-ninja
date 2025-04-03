@@ -3,58 +3,46 @@
 {% block content %}
 <article>
   <header>
-    <h1>Web Scraping Specialist</h1>
-    <p>I specialize in web scraping on a professional basis. <a href="/cv">View my CV</a> for more details.</p>
-  </header>
-  
-  <ul>
-    <li>Rust and Python languages</li>
-    <li>Messages and storage with MongoDB, Redis and gRPC</li>
-  </ul>
+    <h1>Innovative Data Engineer</h1>
+    <p>
+      I specialize in engineering scalable web crawlers using Rust, capable of
+      handling millions of pages with ease. My approach turns raw data into
+      actionable intelligence with cutting-edge technologies.
+    </p>
+    <p><a href="/cv">View my CV</a> for more details.</p>
+  </header>  
 </article>
 
-<div class="grid">
-  <!-- Project Card 1 -->
-  <article>
+<div class="projects-container grid">
+  <div class="project-card">
     <header>
-      <h3>Project 1</h3>
+      <h4>CETD implementation</h4>
     </header>
-    <p>Description of project 1 goes here.</p>
+    <a href="https://github.com/oiwn/dom-content-extraction">Content extraction via Text Density</a>
     <footer>
-      <details>
-        <summary>Technologies</summary>
-        <p>Rust, MongoDB</p>
-      </details>
+      <summary>Algorithm described in the paper by Fei Sun, Dandan Song and Lejian Liao</summary>
     </footer>
-  </article>
+  </div>
   
-  <!-- Project Card 2 -->
-  <article>
+  <div class="project-card">
     <header>
-      <h3>Project 2</h3>
+      <h4>Expiring Bloom Filter</h4>
     </header>
-    <p>Description of project 2 goes here.</p>
+    <a href="https://github.com/oiwn/expiring-bloom-rs">Bloom Filter</a>
     <footer>
-      <details>
-        <summary>Technologies</summary>
-        <p>Python, Redis</p>
-      </details>
+      <summary>Sliding window implementation of decaying bloom filter</summary>
     </footer>
-  </article>
+  </div>
   
-  <!-- Project Card 3 -->
-  <article>
+  <div class="project-card">
     <header>
-      <h3>Project 3</h3>
+      <h4>Async framework for data extraction</h4>
     </header>
-    <p>Description of project 3 goes here.</p>
+    <a href="https://github.com/oiwn/capp-rs">Comprehensive Asynchronous Parallel Processing</a>
     <footer>
-      <details>
-        <summary>Technologies</summary>
-        <p>Rust, gRPC</p>
-      </details>
+      <summary>Common things i use to build Rust CLI tools for web crawlers</summary>
     </footer>
-  </article>
+  </div>
 </div>
 
 {{ section.content | safe }}

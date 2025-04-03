@@ -1,12 +1,12 @@
 .container {
-  --block-spacing-vertical: 0.5rem; 
+  --block-spacing-vertical: 0.25rem; 
   padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
 }
 
 header.container {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0rem;
   border-bottom: 1px solid var(--card-border-color);
 }
 
@@ -16,7 +16,7 @@ main.container {
 
 // Improve article spacing
 article {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
   
   h1 {
     margin-bottom: 0.5rem;
@@ -29,7 +29,7 @@ article {
 
 // Better grid layout for projects
 .grid {
-  gap: 1.5rem;
+  gap: 1rem;
   
   article {
     margin: 0;
@@ -64,4 +64,31 @@ ul {
       margin-bottom: 0.5rem;
     }
   }
+}
+
+// Projects grid
+.projects-container {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem; // adds space after project cards
+}
+
+.project-card {
+  padding: 0.75rem;
+  border: 1px solid var(--card-border-color);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  header h4 {
+    font-size: 1.25rem; // smaller title size
+    margin-bottom: 0.5rem;
+  }
+}
+
+.content-text {
+  margin-top: 2rem;  // bigger gap for text after the cards
+  padding: 1rem;
 }
