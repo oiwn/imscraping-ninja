@@ -1,40 +1,50 @@
 +++
-title = "What can i do and how"
-subtitle = "projects i looking for"
-date = "2014-04-09"
+title = "My CV"
+date = "2025-04-04"
 +++
-With over 10 years of experience in consulting and developing web scraping
-projects, I have become a trusted expert in delivering time and cost-effective
-solutions to my clients. My expertise in Python has enabled me to build
-high-quality crawlers, but I am now leveraging the power of Rust to develop
-efficient and scalable distributed web crawlers.
+**Professional Summary:**
 
-Hourly Rate: $70/h
+Senior Back-end Engineer and Consultant with over 10 years of experience
+specializing in Rust-based data engineering and high-volume web scraping.
+Proven expertise in developing scalable, efficient systems capable of processing
+millions of pages daily. Passionate about consulting and mentoring teams to
+achieve exceptional results through optimal architecture, performance tuning, and
+leveraging Rust for superior performance.
 
-I am excited to work on the following types of projects:
+**Technical Skills:**
 
-- Collaborative, semi-long term projects involving 1-3 team members who
-  preferably have experience with Agile development methodologies.
+- **Languages:** Rust (primary), Python, JavaScript (limited, mainly for integration)
+- **Areas of Expertise:** Web scraping, distributed systems, data pipelines, REST API development
 
-- Large-scale website crawling - extracting data from millions of
-  pages from different kind of websites.
-  
-- Collecting domain-specific data to train large language models,
-  ensuring they excel in specialized areas. By efficiently curating and
-  preprocessing high-quality datasets, I enable the creation of fine-tuned
-  language models that provide valuable insights and enhance decision-making in
-  various industries.
+**Project Specialization:**
 
-- By gathering diverse, high-quality data, I help train various machine learning
-  and AI models, including image recognition, natural language processing,
-  recommendation systems, and predictive analytics. My expertise in acquiring
-  relevant data ensures that these AI systems are robust, accurate, and capable
-  of addressing complex challenges across multiple industries.
+- **High-Scale Web Crawling:**
 
-- Price comparison system development, including regular crawling of multiple
-  sources for data extraction, data transformation, and loading relevant
-  information into databases.
+  - Designed and implemented distributed web crawlers handling millions of pages daily, significantly reducing processing time and infrastructure costs.
 
-- REST API development, enabling seamless integration and efficient
-  communication between applications.
+- **Machine Learning Data Preparation:**
+
+  - Expertise in collecting, processing, and delivering high-quality datasets for training specialized Large Language Models (LLMs) and AI systems, ensuring accurate and robust performance.
+
+- **Price Comparison and Data Aggregation Systems:**
+
+  - Developed automated data extraction and transformation pipelines from numerous sources, continuously maintaining accurate and up-to-date data.
+
+- **Consulting and Mentoring:**
+
+  - Provided strategic technical consulting and mentoring, empowering teams to implement best practices, optimize existing solutions, and transition effectively to Rust-based architectures.
+
+**Rates:**
+
+- Consulting and Mentoring: \$200/hr
+- Development: \$100/hr
+
+**Open Source Contributions:**
+
+- [**dom-content-extraction**](https://github.com/oiwn/dom-content-extraction): Rust library for DOM-based content extraction via text density.
+- [**capp-rs**](https://github.com/oiwn/capp-rs): CLI toolkit for efficient Rust-based web crawlers.
+- [**expiring-bloom-rs**](https://github.com/oiwn/expiring-bloom-rs) time decaying bloom filters.
+- [**tui-screen-savers-rs**](https://github.com/oiwn/tui-screen-savers-rs): Terminal visual effects and screen savers in Rust.
+
+**GitHub:** [github.com/oiwn](https://github.com/oiwn)
 

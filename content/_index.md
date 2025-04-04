@@ -1,23 +1,15 @@
 +++
 title = "Home"
 +++
-Web scraping, also known as "web harvesting" or "web data extraction," is a
-method used to extract valuable information from diverse sources in a structured
-format, making it suitable for further utilization.
+Reinventing web data extraction, I turn raw, unstructured web content into
+powerful, actionable intelligence. Leveraging Rust for high-speed, massive-scale
+crawling alongside Python for flexible data processing, I create robust web robots
+and distributed systems that deliver the data foundations for advanced machine
+learning and AI projects.
 
-My typical projects encompass the development of web robots, data processing
-systems, REST services, and SPA dashboards.
+My approach underpins everything from training domain-specific LLMs to building
+next-gen AI solutions.
 
-- Collecting data to train domain specific llms.
-- Collecting data for vairous kind of AI systems.
-
-I employ cutting-edge technologies to ensure top-notch results for my clients.
-
-Projects: 
-
-- Rust implementation of Fei Sun, Dandan Song and Lejian Liao paper 
-  *Content Extraction via Text Density (CETD)* 
-  [https://github.com/oiwn/dom-content-extraction](https://github.com/oiwn/dom-content-extraction)
-
-- Rust implementation of Stochastic Room Impulse Response Generation.
-  [https://github.com/oiwn/stoRIR-rs](https://github.com/oiwn/stoRIR-rs)
+-	Training Domain-Specific LLMs: Data fuels the development of specialized language models tailored to unique industry needs.
+-	Empowering AI Systems: Leverage data to power AI algorithms in areas like predictive analytics, computer vision, and natural language processing.
+- Enhancing Decision-Making: Structured data drives business intelligence and real-time analytics for smarter decisions.

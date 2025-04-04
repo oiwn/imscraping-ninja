@@ -15,9 +15,10 @@
         <li><strong>Data Engeneer</strong></li>
       </ul>
       <ul>
-        <li><a href="/" class="contrast"><strong>Home</strong></a></li>
-        <li><a href="/posts">Posts</a></li>
-        <li><a href="/cv">CV</a></li>
+        <li><a href="{{ get_url(path="/") }}" class="contrast"><strong>Home</strong></a></li>
+        <li><a href="{{ get_url(path="/posts") }}">Notes</a></li>
+        <li><a href="{{ get_url(path="/crypto") }}">Crypto</a></li>
+        <li><a href="{{ get_url(path="/cv") }}"><button class="secondary">CV</button></a></li>
       </ul>
     </nav>
   </header>
