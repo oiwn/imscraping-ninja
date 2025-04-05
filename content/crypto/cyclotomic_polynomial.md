@@ -39,3 +39,25 @@ Thus, after reduction, the result returns to degree `3`:
 `c_0 + c_1*X + c_2*X^2 + c_3*X^3`
 
 This approach keeps computations efficient and manageable, crucial for practical CKKS operations.
+
+SageMath example:
+
+```python
+# Define ring Z_q[X]/(X^n + 1)
+q = 17  # modulus q (prime for simplicity)
+n = 4   # polynomial modulus degree
+ 
+R.<X> = PolynomialRing(Integers(q))
+S = R.quotient(X^n + 1, 'x')
+x = S.gen()
+ 
+# Define polynomials in quotient ring
+A = 3 + 2*x + x^2 + 4*x^3
+B = 1 + x^2
+ 
+# Multiply polynomials modulo X^n + 1
+C = A * B
+ 
+print("A * B mod (X^n + 1):", C)
+A * B mod (X^n + 1): 6*x^3 + 4*x^2 + 15*x + 2
+```
