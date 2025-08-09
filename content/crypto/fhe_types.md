@@ -1,8 +1,8 @@
 +++
 date = "2025-08-09"
-title = ""
-description = ""
-keywords = ""
+title = "Overview of Major Fully Homomorphic Encryption (FHE) Schemes"
+description = "Description the main Fully Homomorphic Encryption (FHE) schemes — BGV, CKKS, BFV, FHEW, and TFHE — with concise explanations of their traits, arithmetic types, and best use cases."
+keywords = "FHE, BGV, CKKS, BFV, FHEW, TFHE"
 tags = ["note", "fhe"]
 +++
 
