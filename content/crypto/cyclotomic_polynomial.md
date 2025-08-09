@@ -2,7 +2,7 @@
 date = "2025-04-04"
 title = "Cyclotomic polynomial for CKKS"
 description = ""
-keywords = "note, ckks"
+keywords = ["note, ckks"]
 tags = ["note", "ckks"]
 +++
 ## Cyclotomic Polynomial `{Z}_q[X]/(X^n + 1)` in CKKS
