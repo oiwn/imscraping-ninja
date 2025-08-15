@@ -37,5 +37,4 @@ resources/_gen/
 
 # misc
 .amc.toml
-.code
-code.txt
+AGENTS.md
