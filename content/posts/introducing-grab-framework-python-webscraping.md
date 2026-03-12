@@ -25,7 +25,12 @@ and was never introduced to the worldwide community, primarily because of lack
 of documentation. Fortunately author finished English docs this year and i guess
 the time is come.
 
-+ [Grab English Documentation](http://docs.grablib.org/en/latest/)
+Update (2025): the project was refreshed by its author. The repository was
+reset to match the latest PyPI release, compatibility was updated through
+Python 3.13, and CI was added. There are no major new features, but the
+codebase is maintained again.
+
++ [Grab English Documentation](https://grab.readthedocs.io/en/latest/)
 + [Grab Framework on Github](https://github.com/lorien/grab)
 
 The Grab framework developed from strictly practical purposes therefore it
@@ -145,7 +150,7 @@ This is what you need to follow example:
 
 Clone repository
 
-`git clonehttps://github.com/istinspring/grab-datascience-blogs`
+`git clone https://github.com/oiwn/grab-datascience-blogs`
 
 create and activate virtual environment for this project, cd into the project
 directory and install required dependencies `pip install -r
@@ -198,7 +203,7 @@ SPIDER_CONFIG = {
 }
 ```
 
-As you can see in [get_instance](https://github.com/istinspring/grab-datascience-blogs/blob/master/spiders/base.py#L37) it's possible to define list of proxies,
+As you can see in [get_instance](https://github.com/oiwn/grab-datascience-blogs/blob/master/spiders/base.py) it's possible to define list of proxies,
 and backends for http cache and tasks queue. After you done with
 initialization run the spider:
 
@@ -269,7 +274,7 @@ pass previously collected data to the new handler.
 Also `task` accept parameters to setup task priority, control cache per request
 (refresh/disable - useful for POST requests), counters for retries.
 
-[http://docs.grablib.org/en/latest/spider/task.html](http://docs.grablib.org/en/latest/spider/task.html)
+[https://grab.readthedocs.io/en/latest/spider/task.html](https://grab.readthedocs.io/en/latest/spider/task.html)
 
 ## Where are middlewares?
 
@@ -300,7 +305,7 @@ class SomeSpider(Spider):
         pass
 ```
 
-I made a [simple "page validation" decorator](https://github.com/istinspring/grab-datascience-blogs/blob/master/utils/decorators.py)
+I made a [simple "page validation" decorator](https://github.com/oiwn/grab-datascience-blogs/blob/master/utils/decorators.py)
 
 ## Http cache and queue backends
 
