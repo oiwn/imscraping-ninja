@@ -74,6 +74,8 @@ I converted all 6 routes in 4 phases, starting with the simplest to validate the
 | After table routes | 803 KB | `/stellarhosts` (70 KB), `/exoplanets` (57 KB) + shared deps (238 KB) |
 | After detail routes | **535 KB** | `/stellarhosts/:hostname` (83 KB), `/exoplanets/:pl_name` (41 KB) |
 
+On top of that, adding  application/wasm  to nginx's  gzip_types  compresses every WASM chunk on the wire — the baseline 1.2 MB bundle alone drops from 1.2 MB to 523 KB over the network, a 56% reduction for zero code changes. These two optimizations stack: lazy routes shrink what gets fetched, gzip shrinks what gets transferred.
+
 **55% reduction in initial page load.** The first visit to any route fetches its chunk, then it's cached by the browser. The total bytes across all chunks are slightly higher (~1.3 MB) due to chunk glue code, but users only download what they actually visit.
 
 ### Why it went smoothly
