@@ -69,8 +69,21 @@ ul {
 // Projects grid
 .projects-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 2rem; // adds space after project cards
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {

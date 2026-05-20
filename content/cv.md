@@ -4,22 +4,20 @@ date = "2025-08-09"
 +++
 **Professional Summary:**
 
-Senior Back-end Engineer and Consultant with over 10 years of experience
-specializing in Rust-based data engineering and high-volume web scraping.
-Proven expertise in developing scalable, efficient systems capable of processing
-millions of pages daily. Passionate about consulting and mentoring teams to
-achieve exceptional results through optimal architecture, performance tuning, and
-leveraging Rust for superior performance.
+Senior Back-end Engineer with over 10 years of experience specializing in
+Rust-based data engineering, high-volume web scraping, and AI agent harness development.
+Track record of building scalable systems that process millions of pages daily,
+from distributed crawlers to single-view data platforms.
 
 **Core Competencies**
 
 - **Languages**: Rust (main), Python (secondary), JavaScript (integration & tooling)
-- **Domains**: large‑scale web scraping, data engineering, distributed systems,
-  REST/gRPC APIs, async & parallel programming, performance tuning
+- **Expertise**: large‑scale web scraping, distributed crawlers, single-view data systems,
+  AI agent harness using Rust for low memory footprint and reliability through the ownership model,
+  REST/gRPC APIs
 - **Cloud & Infra**: Kubernetes, Docker, AWS (ECS, S3, Lambda), GCP, Terraform, GitHub Actions, Prometheus/Grafana
 - **Data Stores**: PostgreSQL, Redis, MongoDB, SurrealDB, Qdrant, Redb/Fjall
-- **Areas of Expertise:** Web scraping, distributed systems, data pipelines, REST API development
-- **Areas of Interests:** Fully Homomorphic Encryption (FHE), Abstract Algebra, Type Theory
+- **Areas of Interests:** Fully Homomorphic Encryption (FHE), Abstract Algebra, Type Theory, LLM reasoning, agentic automation
 
 **Project Specialization:**
 
@@ -49,11 +47,12 @@ ITMO University — Information Technology, Optical Design and Engineering (Russ
 
 **Open Source Projects:**
 
+- [**capp-rs**](https://github.com/oiwn/capp-rs): Modular framework for async web crawlers and data pipelines
 - [**dom-content-extraction**](https://github.com/oiwn/dom-content-extraction): Rust implementation of the Content Extraction via Text Density algorithm
-- [**capp-rs**](https://github.com/oiwn/capp-rs): Modular toolkit for async web crawlers and data pipelines
-- [**expiring-bloom-rs**](https://github.com/oiwn/expiring-bloom-rs) Probabilistic data structures with persistence 
-- [**tui-screen-savers-rs**](https://github.com/oiwn/tui-screen-savers-rs): Terminal screen‑saver engine and visual‑effects library in Rust
-- [**toy-ckks**](https://github.com/oiwn/toy-heaan-ckks):  Educational prototype of the CKKS homomorphic encryption scheme in Rust
+- [**probabilistic-rs**](https://github.com/oiwn/probabilistic-rs): Probabilistic data structures with persistence
+- [**exoplanets-catalog**](https://github.com/oiwn/exoplanets-catalog): Interactive catalog for NASA Exoplanet Archive, built with Leptos, Axum, and Polars
+- [**pageinfo-rs**](https://github.com/oiwn/pageinfo-rs): Web page analysis tool for AI agents — extracts structure, metadata, and URL patterns
+- [**tarts**](https://github.com/oiwn/tarts): Terminal screen savers and visual effects in Rust
 
 **GitHub:** [github.com/oiwn](https://github.com/oiwn)
 

@@ -1,15 +1,17 @@
 +++
 title = "Home"
 +++
-Reinventing web data extraction, I turn raw, unstructured web content into
-powerful, actionable intelligence. Leveraging Rust for high-speed, massive-scale
-crawling alongside Python for flexible data processing, I create robust web robots
-and distributed systems that deliver the data foundations for advanced machine
-learning and AI projects.
+I build high-performance web crawlers and data pipelines in Rust, capable of fetching
+millions of pages and API endpoints daily. Combined with Python for flexible processing,
+these systems deliver clean, structured data at scale.
 
-My approach underpins everything from training domain-specific LLMs to building
-next-gen AI solutions.
-
--	Training Domain-Specific LLMs: Data fuels the development of specialized language models tailored to unique industry needs.
--	Empowering AI Systems: Leverage data to power AI algorithms in areas like predictive analytics, computer vision, and natural language processing.
-- Enhancing Decision-Making: Structured data drives business intelligence and real-time analytics for smarter decisions.
+- **Web Crawling at Scale**: Distributed crawlers handling millions of pages daily with
+  minimal infrastructure footprint, built on Rust for speed and reliability.
+- **Single-View Data Systems**: Consolidating data from multiple sources into a unified,
+  comprehensive view — breaking down silos and providing a single source of truth for
+  decision-making and analytics.
+- **Agent Harness Infrastructure**: Building the execution environment that wraps AI models
+  with tools, APIs, and memory — giving them the "hands and eyes" to browse the web,
+  interact with services, and run complex workflows autonomously using LLM reasoning.
+- **Empowering AI Systems**: Delivering the structured data and tooling that power
+  domain-specific AI solutions, from predictive analytics to natural language processing.
