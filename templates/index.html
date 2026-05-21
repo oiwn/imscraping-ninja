@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
+{% block title %}Data Engeneer{% endblock %}
+
 {% block content %}
-<article>
-  <header>
+<section class="home-intro">
+  <div>
     <h1>Innovative Data Engineer</h1>
     <p>
       I specialize in engineering scalable web crawlers using Rust, capable of
@@ -10,70 +12,60 @@
       actionable intelligence with cutting-edge technologies.
     </p>
     <p><a href="/cv">View my CV</a> for more details.</p>
-  </header>  
-</article>
+  </div>
+</section>
 
-<div class="projects-container grid">
+<section class="projects-container" aria-label="Open source projects">
   <div class="project-card">
     <header>
       <h4>Async framework for data extraction</h4>
     </header>
-    <a href="https://github.com/oiwn/capp-rs">capp-rs</a>
-    <footer>
-      <summary>Modular framework for async web crawlers and data pipelines</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/capp-rs">capp-rs</a>
+    <p>Modular framework for async web crawlers and data pipelines</p>
   </div>
   
   <div class="project-card">
     <header>
       <h4>CETD implementation</h4>
     </header>
-    <a href="https://github.com/oiwn/dom-content-extraction">dom-content-extraction</a>
-    <footer>
-      <summary>Content extraction via Text Density algorithm in Rust</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/dom-content-extraction">dom-content-extraction</a>
+    <p>Content extraction via Text Density algorithm in Rust</p>
   </div>
   
   <div class="project-card">
     <header>
       <h4>Probabilistic data structures</h4>
     </header>
-    <a href="https://github.com/oiwn/probabilistic-rs">probabilistic-rs</a>
-    <footer>
-      <summary>Probabilistic data structures with persistence</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/probabilistic-rs">probabilistic-rs</a>
+    <p>Probabilistic data structures with persistence</p>
   </div>
   
   <div class="project-card">
     <header>
       <h4>Exoplanets Catalog</h4>
     </header>
-    <a href="https://github.com/oiwn/exoplanets-catalog">exoplanets-catalog</a>
-    <footer>
-      <summary>Interactive catalog for NASA Exoplanet Archive, built with Leptos, Axum, and Polars</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/exoplanets-catalog">exoplanets-catalog</a>
+    <p>Interactive catalog for NASA Exoplanet Archive, built with Leptos, Axum, and Polars</p>
   </div>
   
   <div class="project-card">
     <header>
       <h4>Page analysis for AI agents</h4>
     </header>
-    <a href="https://github.com/oiwn/pageinfo-rs">pageinfo-rs</a>
-    <footer>
-      <summary>Web page analysis tool for AI agents — extracts structure, metadata, and URL patterns</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/pageinfo-rs">pageinfo-rs</a>
+    <p>Web page analysis tool for AI agents — extracts structure, metadata, and URL patterns</p>
   </div>
   
   <div class="project-card">
     <header>
       <h4>Terminal screen savers</h4>
     </header>
-    <a href="https://github.com/oiwn/tarts">tarts</a>
-    <footer>
-      <summary>Terminal screen savers and visual effects in Rust</summary>
-    </footer>
+    <a class="project-link" href="https://github.com/oiwn/tarts">tarts</a>
+    <p>Terminal screen savers and visual effects in Rust</p>
   </div>
-</div>
+</section>
 
-{{ section.content | safe }}
+<section class="home-content content-body">
+  {{ section.content | safe }}
+</section>
 {% endblock %}

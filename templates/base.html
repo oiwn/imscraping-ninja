@@ -1,10 +1,11 @@
-<html>
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <title>{% block title %}{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Data Engeneer{% endblock %}</title>
   <meta name="google-site-verification" content="KGrdXDKiqqHg93kix1ByT2oXJi-axmuq2MzK1CvqglM" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.jade.min.css">
   <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSS9YD7MGL"></script>
@@ -17,27 +18,27 @@
   </script>
 </head>
 
-<body>
-  <header class="container">
-    <nav>
-      <ul>
-        <li><strong>Data Engeneer</strong></li>
+<body class="site-shell">
+  <header class="site-header container">
+    <nav class="site-nav">
+      <ul class="site-brand">
+        <li><a href="{{ get_url(path="/") }}" class="brand-mark">Data Engeneer</a></li>
       </ul>
-      <ul>
-        <li><a href="{{ get_url(path="/") }}" class="contrast"><strong>Home</strong></a></li>
+      <ul class="site-links">
+        <li><a href="{{ get_url(path="/") }}" class="contrast">Home</a></li>
         <li><a href="{{ get_url(path="/posts") }}">Notes</a></li>
         <li><a href="{{ get_url(path="/crypto") }}">Crypto</a></li>
-        <li><a href="{{ get_url(path="/cv") }}"><button class="secondary">CV</button></a></li>
+        <li><a href="{{ get_url(path="/cv") }}" class="nav-cta">CV</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="site-main container">
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="container">
-    <center><small>© oiwn, {{ now() | date(format="%Y") }}</small><center>
+  <footer class="site-footer container">
+    <small>© oiwn, {{ now() | date(format="%Y") }}</small>
   </footer>
 </body>
 </html>

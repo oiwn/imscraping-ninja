@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h3>{{ section.title }}</h3>
-<p>{{ section.content | safe }}</p>
+{% block title %}
+{{ section.title }}
+{% endblock %}
 
-<ul>
-{% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-{% endfor %}
-</ul>
+{% block content %}
+<section class="section-head">
+  <h1>{{ section.title }}</h1>
+  <div class="section-copy content-body">
+    {{ section.content | safe }}
+  </div>
+</section>
+
+<section class="entry-list" aria-label="{{ section.title }}">
+  {% for page in section.pages %}
+    <article class="entry-row">
+      <div class="entry-meta">
+        {% if page.date %}
+          <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+        {% endif %}
+      </div>
+      <div class="entry-main">
+        <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>
 {% endblock %}
