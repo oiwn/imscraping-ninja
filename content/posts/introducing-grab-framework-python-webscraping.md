@@ -8,7 +8,7 @@ tags = ["grab framework", "web scraping"]
 
 Writing posts is hards, especially using foreign language. So at first i'll
 provide brief and than will try to explain in more details using bad English (my
-appologies).
+apologies).
 
 ## What is Grab?
 
@@ -44,7 +44,7 @@ sugnifficially different from Scrapy. Noticeable features would be:
 + Powerful API of extracting info from HTML documents with XPATH queries
 + Asynchronous API to make thousands of simultaneous queries. This part of
   library called **Spider**.
-+ **Automatical change of User Agent**
++ **Automatic change of User Agent**
 + **Rotating proxies implementation out of the box**
 + Clear mechanism of requests flow
 + Multiprocessing support
@@ -280,7 +280,7 @@ Also `task` accept parameters to setup task priority, control cache per request
 
 Grab has no such thing as Scrapy's middlewares. Scrapy tried to use similar
 conceptions as traditional web frameworks, but from practical purposes it's not
-necessary. As usual you need to highjack some parameters of the grab object
+necessary. As usual you need to hijack some parameters of the grab object
 before the request or check some conditions, and this could be easily
 implemented using ordinal python decorators.
 
@@ -313,7 +313,7 @@ It would be good idea to save scraped pages into the local http cache, to avoid
 network i/o during development process, and there is few backends available for
 mongodb, mysql and postgres. In most cases i use mongodb.
 
-Another noticable feature - backends for task queues. Sometimes your scraper
+Another noticeable feature - backends for task queues. Sometimes your scraper
 handler could generate large amount of requests and consume a lot of memory
 which could be a problem if memory is limited (small or micro instances).
 
@@ -341,7 +341,7 @@ parts from grab library to keep the core simple:
 **weblib** is a library with a bunch of commonly used functions and helpers. As
 far as i remember there is even scrapers for popular search engines!
 
-While **selectors** provide nice syntax to lxml library so you sould use it
+While **selectors** provide nice syntax to lxml library so you should use it
 like:
 
 ```python
@@ -353,7 +353,7 @@ items = grab.doc('//h2[@class="item"]').text_list()
 item = grab.doc('//h2[@class="item"]').text(default='')
 # similar for attributes
 images = grab.doc('//img[@class="item-image"]').attr_list('src')
-# or just one, if there is no image exception will be rised
+# or just one, if there is no image exception will be raised
 image = grab.doc('//img[@class="item-image"]').attr('src')
 ```
 

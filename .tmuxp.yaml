@@ -22,7 +22,7 @@ windows:
     panes:
       - shell_command:
         - eza -l
-  - window_name: notes
+  - window_name: yazi
     panes:
       - shell_command:
-        - emacs -nw notes.org
+        - yazi
