@@ -1,17 +1,8 @@
 +++
 title = "Home"
 +++
-I build high-performance web crawlers and data pipelines in Rust, capable of fetching
-millions of pages and API endpoints daily. Combined with Python for flexible processing,
-these systems deliver clean, structured data at scale.
+From acquiring information at scale to processing it to the analytics on top, I've worked the full data lifecycle - that end-to-end command is what makes the data actually useful.
 
-- **Web Crawling at Scale**: Distributed crawlers handling millions of pages daily with
-  minimal infrastructure footprint, built on Rust for speed and reliability.
-- **Single-View Data Systems**: Consolidating data from multiple sources into a unified,
-  comprehensive view — breaking down silos and providing a single source of truth for
-  decision-making and analytics.
-- **Agent Harness Infrastructure**: Building the execution environment that wraps AI models
-  with tools, APIs, and memory — giving them the "hands and eyes" to browse the web,
-  interact with services, and run complex workflows autonomously using LLM reasoning.
-- **Empowering AI Systems**: Delivering the structured data and tooling that power
-  domain-specific AI solutions, from predictive analytics to natural language processing.
+- **Rust where it counts.** Crawlers, queues, parsers, plus the CLI tools and MCP servers agents call directly - all in Rust for speed, low footprint, and reliability. Python for flexible processing and glue.
+- **A harness, not just a model.** The harness is the infrastructure around a model: tools, APIs, memory, MCP surfaces - that makes it good at one specific job.
+- **Built to run at scale.** Distributed systems pulling millions of pages and API endpoints a day on a small footprint, with pipelines that keep the data consistent downstream.

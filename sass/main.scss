@@ -1,31 +1,5 @@
-:root {
-  color-scheme: dark;
-  --site-bg: #07110f;
-  --site-panel: #0b1815;
-  --site-panel-strong: #10231f;
-  --site-border: #21433b;
-  --site-border-strong: #39a983;
-  --site-text: #e7f5ef;
-  --site-muted: #8ba99d;
-  --site-dim: #5f7d72;
-  --site-accent: #40d49a;
-  --site-accent-2: #e0c76f;
-  --site-danger: #ff6f61;
-
-  --pico-font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --pico-font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono",
-    Menlo, monospace;
-  --pico-background-color: var(--site-bg);
-  --pico-color: var(--site-text);
-  --pico-muted-color: var(--site-muted);
-  --pico-primary: var(--site-accent);
-  --pico-primary-hover: #66e2b3;
-  --pico-primary-focus: rgba(64, 212, 154, 0.28);
-  --pico-card-background-color: var(--site-panel);
-  --pico-card-border-color: var(--site-border);
-  --pico-border-radius: 0.35rem;
-}
+// Palette & effect knobs live in _palette.scss — tune the site there.
+@import "palette";
 
 * {
   box-sizing: border-box;
@@ -33,7 +7,7 @@
 
 html {
   background:
-    linear-gradient(180deg, rgba(23, 54, 47, 0.55), transparent 25rem),
+    linear-gradient(180deg, rgba($wash, 0.55), transparent 25rem),
     var(--site-bg);
 }
 
@@ -41,10 +15,85 @@ body {
   min-height: 100vh;
   color: var(--site-text);
   background:
-    linear-gradient(rgba(64, 212, 154, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(64, 212, 154, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba($accent, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($accent, 0.025) 1px, transparent 1px),
     transparent;
   background-size: 40px 40px;
+}
+
+/* ---- Animated background layers (all fixed, non-interactive) ---- */
+
+/* Soft cyan band that sweeps down the viewport like a CRT refresh. */
+body::before {
+  content: "";
+  position: fixed;
+  top: -30vh;
+  right: 0;
+  left: 0;
+  z-index: 9998;
+  height: 30vh;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba($accent, $sweep-alpha),
+    transparent
+  );
+  mix-blend-mode: screen;
+}
+
+/* Fine static CRT scanlines. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba($scanline-color, $scanline-alpha) 0,
+    rgba($scanline-color, $scanline-alpha) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+  opacity: $scanline-opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: grid-drift $grid-drift-duration linear infinite;
+  }
+
+  body::before {
+    animation: sweep $sweep-duration linear infinite;
+  }
+
+  body::after {
+    animation: scanline-drift $scanline-drift-duration linear infinite;
+  }
+}
+
+/* Grid scrolls exactly one 40px cell, so it loops seamlessly. */
+@keyframes grid-drift {
+  to {
+    background-position: 40px 40px;
+  }
+}
+
+@keyframes sweep {
+  to {
+    transform: translateY(130vh);
+  }
+}
+
+@keyframes scanline-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 6px;
+  }
 }
 
 a {
@@ -113,11 +162,29 @@ button:focus-visible {
 .site-links a:hover {
   color: var(--site-text);
   border-color: var(--site-border);
-  background: rgba(64, 212, 154, 0.06);
+  background: rgba($accent, 0.06);
 }
 
 .site-links a.contrast {
   color: var(--site-text);
+}
+
+/* Active page: terminal bracket marker on the text links.
+   The CV button is excluded — its yellow is the rounded container, not the text. */
+.site-links a.is-active:not(.nav-cta) {
+  color: var(--site-accent);
+}
+
+.site-links a.is-active:not(.nav-cta)::before {
+  content: "[";
+  margin-right: 0.12rem;
+  color: var(--site-accent);
+}
+
+.site-links a.is-active:not(.nav-cta)::after {
+  content: "]";
+  margin-left: 0.12rem;
+  color: var(--site-accent);
 }
 
 .site-links .nav-cta {
@@ -129,19 +196,66 @@ button:focus-visible {
 
 .site-links .nav-cta:hover {
   color: var(--site-bg);
-  background: #66e2b3;
+  background: $accent-hover;
+  box-shadow: var(--glow-primary);
+}
+
+/* On the CV page the button turns amber (its container color changes). */
+.site-links .nav-cta.is-active {
+  background: var(--site-accent-3);
+  border-color: var(--site-accent-3);
+  box-shadow: var(--glow-secondary);
 }
 
 .site-main {
   padding-top: 1.8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.75rem;
+}
+
+/* Drop the last section's trailing margin so the footer gap is controlled. */
+.site-main > *:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer {
-  padding: 1.5rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 1.25rem 0 2rem;
   color: var(--site-dim);
   border-top: 1px solid var(--site-border);
   font-family: var(--pico-font-family-monospace);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--site-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--site-accent);
+  text-shadow: var(--glow-primary);
+}
+
+.footer-ico {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+}
+
+.footer-links a:hover .footer-ico {
+  filter: drop-shadow(var(--glow-primary));
 }
 
 .home-intro {
@@ -150,19 +264,23 @@ button:focus-visible {
   margin-bottom: 1.25rem;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(64, 212, 154, 0.14), transparent 55%),
+    linear-gradient(90deg, rgba($accent, 0.14), transparent 55%),
+    linear-gradient(300deg, rgba($accent-3, 0.12), transparent 45%),
     transparent;
-  border-top: 1px solid var(--site-border);
-  border-bottom: 1px solid var(--site-border);
+  border-top: 1px solid var(--site-border-strong);
+  border-bottom: 1px solid var(--site-accent-3);
 }
 
 .home-intro h1 {
   max-width: 20ch;
   margin-bottom: 1rem;
   color: var(--site-text);
-  font-size: clamp(2.25rem, 5.4vw, 4.25rem);
-  line-height: 0.95;
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  line-height: 0.98;
   letter-spacing: 0;
+  text-shadow:
+    0 0 0.5rem rgba($accent, 0.35),
+    0 0 1.5rem rgba($accent-3, 0.18);
 }
 
 .home-intro p {
@@ -174,6 +292,120 @@ button:focus-visible {
 
 .home-intro p:last-child {
   margin-bottom: 0;
+}
+
+/* Shell-prompt section label with a trailing neon rule. */
+.home-section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0 0 1.1rem;
+  font-family: var(--pico-font-family-monospace);
+}
+
+.home-section-head h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--site-muted);
+  white-space: nowrap;
+}
+
+.home-section-head h2::before {
+  content: "$ ";
+  color: var(--site-accent);
+}
+
+.home-section-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--site-border-strong), transparent);
+}
+
+.services {
+  margin-bottom: 1.25rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 12rem;
+  padding: 1.25rem 1.1rem 1.1rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba($accent-3, 0.05), transparent 40%),
+    rgba($panel, 0.92);
+  border: 1px solid var(--site-border);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+/* neon corner accent */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-top: 2px solid var(--site-accent-3);
+  border-right: 2px solid var(--site-accent-3);
+  opacity: 0.55;
+  transition: opacity 160ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--site-accent);
+  background-color: var(--site-panel-strong);
+  box-shadow: var(--glow-primary);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-index {
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.8rem;
+  color: var(--site-dim);
+}
+
+.service-kicker {
+  margin-top: 0.15rem;
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--site-accent-3);
+  text-shadow: var(--glow-secondary);
+}
+
+.service-card h3 {
+  margin: 0.5rem 0 0.55rem;
+  color: var(--site-text);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.18;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: 0.95rem;
 }
 
 .projects-container {
@@ -189,8 +421,8 @@ button:focus-visible {
   flex-direction: column;
   padding: 1.1rem;
   background:
-    linear-gradient(180deg, rgba(64, 212, 154, 0.07), transparent),
-    rgba(11, 24, 21, 0.92);
+    linear-gradient(180deg, rgba($accent, 0.07), transparent),
+    rgba($panel, 0.92);
   border: 1px solid var(--site-border);
   transition:
     border-color 160ms ease,
@@ -202,6 +434,11 @@ button:focus-visible {
   transform: translateY(-3px);
   border-color: var(--site-border-strong);
   background-color: var(--site-panel-strong);
+  box-shadow: var(--glow-primary);
+}
+
+.project-card:hover .project-link {
+  text-shadow: var(--glow-primary);
 }
 
 .project-card header {
@@ -252,6 +489,7 @@ button:focus-visible {
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1.04;
   letter-spacing: 0;
+  text-shadow: 0 0 0.7rem rgba($accent, 0.25);
 }
 
 .section-copy {
@@ -269,7 +507,7 @@ button:focus-visible {
   gap: 1rem;
   padding: 1rem;
   margin: 0;
-  background: rgba(11, 24, 21, 0.78);
+  background: rgba($panel, 0.78);
   border: 1px solid var(--site-border);
 }
 
@@ -296,6 +534,7 @@ button:focus-visible {
 
 .entry-main h2 a:hover {
   color: var(--site-accent);
+  text-shadow: var(--glow-primary);
 }
 
 .entry-main p {
@@ -363,6 +602,13 @@ button:focus-visible {
   border-top: 1px solid var(--site-border);
 }
 
+/* First heading sits right under the page-head rule - don't double it. */
+.content-body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .content-body p,
 .content-body li {
   color: var(--site-muted);
@@ -383,12 +629,12 @@ button:focus-visible {
 
 .content-body code {
   color: var(--site-accent-2);
-  background: rgba(224, 199, 111, 0.08);
+  background: rgba($accent-2, 0.08);
 }
 
 .content-body pre {
   border: 1px solid var(--site-border);
-  background: #06100e;
+  background: $pre-bg;
 }
 
 .content-body blockquote {
@@ -405,8 +651,88 @@ button:focus-visible {
   border-color: var(--site-border);
 }
 
+/* ---- CV: skill chips ---- */
+.cv-skill-row {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+
+.cv-skill-label {
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--site-dim);
+}
+
+.cv-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.15rem 0.55rem;
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.82rem;
+  color: var(--site-text);
+  background: rgba($accent, 0.07);
+  border: 1px solid var(--site-border);
+  border-radius: 0.3rem;
+}
+
+.chip-key {
+  color: var(--site-accent-3);
+  background: rgba($accent-3, 0.12);
+  border-color: rgba($accent-3, 0.55);
+  font-weight: 600;
+}
+
+/* ---- CV: rates callout ---- */
+.cv-rates {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 24rem;
+  padding: 1rem 1.1rem;
+  background: rgba($panel, 0.7);
+  border: 1px solid var(--site-border);
+  border-left: 2px solid var(--site-accent-2);
+}
+
+.cv-rate {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--pico-font-family-monospace);
+}
+
+.cv-rate-label {
+  color: var(--site-muted);
+}
+
+.cv-rate-value {
+  font-weight: 700;
+  color: var(--site-accent-2);
+}
+
+.email-obf {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .cv-skill-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
 @media (max-width: 900px) {
-  .projects-container {
+  .projects-container,
+  .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -445,11 +771,13 @@ button:focus-visible {
     padding: 1.1rem;
   }
 
-  .projects-container {
+  .projects-container,
+  .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card {
+  .project-card,
+  .service-card {
     min-height: 0;
   }
 }

@@ -1,71 +1,124 @@
 {% extends "base.html" %}
 
-{% block title %}Data Engineer{% endblock %}
-
 {% block content %}
 <section class="home-intro">
   <div>
-    <h1>Innovative Data Engineer</h1>
+    <h1>AI systems, agent harness, and the data that feeds them.</h1>
     <p>
-      I specialize in engineering scalable web crawlers using Rust, capable of
-      handling millions of pages with ease. My approach turns raw data into
-      actionable intelligence with cutting-edge technologies.
+      I build the infrastructure that makes a model good at a real task: agent
+      harnesses, MCP servers, and pipelines that turn crawlers and APIs into data
+      the agent can act on.
     </p>
-    <p><a href="/cv">View my CV</a> for more details.</p>
+    <p><a href="/cv">View my CV</a> for details and rates.</p>
   </div>
 </section>
 
+<section class="services" aria-label="What I build">
+  <header class="home-section-head"><h2>ls ./services</h2></header>
+  <ul class="services-grid">
+    <li class="service-card">
+      <span class="service-index">01</span>
+      <span class="service-kicker">agents</span>
+      <h3>AI Agent Systems</h3>
+      <p>Agent harness infrastructure: wrapping LLMs with tools, APIs, and memory
+        so they can browse, act, and run multi-step workflows autonomously.</p>
+    </li>
+
+    <li class="service-card">
+      <span class="service-index">02</span>
+      <span class="service-kicker">mcp</span>
+      <h3>MCP Servers</h3>
+      <p>Design and ship Model Context Protocol servers that expose your data and
+        tools to agents safely - read-only query surfaces, guardrails, streamable HTTP.</p>
+    </li>
+
+    <li class="service-card">
+      <span class="service-index">03</span>
+      <span class="service-kicker">crawl</span>
+      <h3>Web Scraping at Scale</h3>
+      <p>Distributed Rust crawlers fetching millions of pages and API endpoints
+        daily, with a small and predictable infrastructure footprint.</p>
+    </li>
+
+    <li class="service-card">
+      <span class="service-index">04</span>
+      <span class="service-kicker">pipelines</span>
+      <h3>Data Pipelines · Rust + Python</h3>
+      <p>Ingestion → processing → delivery pipelines: Rust for high-throughput,
+        low-footprint stages, Python for flexible processing and glue.</p>
+    </li>
+
+    <li class="service-card">
+      <span class="service-index">05</span>
+      <span class="service-kicker">single-view</span>
+      <h3>Single-View Data Systems</h3>
+      <p>Consolidating many sources into one clean, structured, queryable source
+        of truth - breaking down silos for analytics and decisions.</p>
+    </li>
+
+    <li class="service-card">
+      <span class="service-index">06</span>
+      <span class="service-kicker">datasets</span>
+      <h3>ML / LLM Dataset Preparation</h3>
+      <p>Collecting, cleaning, and delivering high-quality datasets for training
+        and evaluating specialized language models and AI systems.</p>
+    </li>
+  </ul>
+</section>
+
+<header class="home-section-head"><h2>cat approach.md</h2></header>
+<section class="home-content content-body">
+  {{ section.content | safe }}
+</section>
+
+<header class="home-section-head"><h2>ls ./open-source</h2></header>
 <section class="projects-container" aria-label="Open source projects">
   <div class="project-card">
     <header>
-      <h4>Async framework for data extraction</h4>
+      <h4>Terminal screensavers in Rust</h4>
     </header>
-    <a class="project-link" href="https://github.com/oiwn/capp-rs">capp-rs</a>
-    <p>Modular framework for async web crawlers and data pipelines</p>
+    <a class="project-link" href="https://github.com/oiwn/tarts">tarts</a>
+    <p>Blazingly fast, memory-safe terminal screensavers - Matrix rain, boids, plasma, and more.</p>
   </div>
-  
+
   <div class="project-card">
     <header>
-      <h4>CETD implementation</h4>
+      <h4>CETD content extraction</h4>
     </header>
     <a class="project-link" href="https://github.com/oiwn/dom-content-extraction">dom-content-extraction</a>
-    <p>Content extraction via Text Density algorithm in Rust</p>
+    <p>Extract main content from HTML via text density - Unicode-aware, with markdown output.</p>
   </div>
-  
+
   <div class="project-card">
     <header>
-      <h4>Probabilistic data structures</h4>
+      <h4>Exoplanet catalog + MCP</h4>
     </header>
-    <a class="project-link" href="https://github.com/oiwn/probabilistic-rs">probabilistic-rs</a>
-    <p>Probabilistic data structures with persistence</p>
+    <a class="project-link" href="https://github.com/oiwn/exodata">exodata</a>
+    <p>NASA exoplanet catalog (Leptos, Axum, Polars) with a REST API and a hosted MCP endpoint.</p>
   </div>
-  
+
   <div class="project-card">
     <header>
-      <h4>Exoplanets Catalog</h4>
+      <h4>Async framework for crawlers</h4>
     </header>
-    <a class="project-link" href="https://github.com/oiwn/exoplanets-catalog">exoplanets-catalog</a>
-    <p>Interactive catalog for NASA Exoplanet Archive, built with Leptos, Axum, and Polars</p>
+    <a class="project-link" href="https://github.com/oiwn/capp-rs">capp-rs</a>
+    <p>Tower-native async runtime for web crawlers and task pipelines - queues, retries, backpressure, DLQ.</p>
   </div>
-  
+
   <div class="project-card">
     <header>
       <h4>Page analysis for AI agents</h4>
     </header>
     <a class="project-link" href="https://github.com/oiwn/pageinfo-rs">pageinfo-rs</a>
-    <p>Web page analysis tool for AI agents — extracts structure, metadata, and URL patterns</p>
+    <p>HTTP-only page analysis for LLMs and agents - identity, URL structure, metadata, feeds, embedded JSON.</p>
   </div>
-  
+
   <div class="project-card">
     <header>
-      <h4>Terminal screen savers</h4>
+      <h4>Probabilistic data structures</h4>
     </header>
-    <a class="project-link" href="https://github.com/oiwn/tarts">tarts</a>
-    <p>Terminal screen savers and visual effects in Rust</p>
+    <a class="project-link" href="https://github.com/oiwn/probabilistic-rs">probabilistic-rs</a>
+    <p>Bloom and expiring-Bloom filters with Python bindings, REST API, and CLI/TUI - ~15-17M ops/sec.</p>
   </div>
-</section>
-
-<section class="home-content content-body">
-  {{ section.content | safe }}
 </section>
 {% endblock %}

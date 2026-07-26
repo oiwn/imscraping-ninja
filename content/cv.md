@@ -1,63 +1,63 @@
 +++
-title = "Web crawling expert CV"
-date = "2025-08-09"
+title = "AI systems & data engineering CV"
 +++
-**Professional Summary:**
+## Summary
 
-Senior Back-end Engineer with over 10 years of experience specializing in
-Rust-based data engineering, high-volume web scraping, and AI agent harness development.
-Track record of building scalable systems that process millions of pages daily,
-from distributed crawlers to single-view data platforms.
+Senior back-end engineer, 10+ years across the full data lifecycle: web crawling at scale, processing into clean structured data, with analytics on top of it. Since 2024, increasingly focused on agent harness infrastructure and data-centric systems around large language models. Rust primary, Python secondary.
 
-**Core Competencies**
+## Experience
 
-- **Languages**: Rust (main), Python (secondary), JavaScript (integration & tooling)
-- **Expertise**: large‑scale web scraping, distributed crawlers, single-view data systems,
-  AI agent harness using Rust for low memory footprint and reliability through the ownership model,
-  REST/gRPC APIs
-- **Cloud & Infra**: Kubernetes, Docker, AWS (ECS, S3, Lambda), GCP, Terraform, GitHub Actions, Prometheus/Grafana
-- **Data Stores**: PostgreSQL, Redis, MongoDB, SurrealDB, Qdrant, Redb/Fjall
-- **Areas of Interests:** Fully Homomorphic Encryption (FHE), Abstract Algebra, Type Theory, LLM reasoning, agentic automation
+**2014 - present, freelance / contract.** Back-end and data engineering across a
+range of domains, mostly solo or in small teams, end to end from crawling to
+delivery:
 
-**Project Specialization:**
+- Large-scale web scraping and crawling platforms
+- Price comparison and data aggregation systems
+- ML dataset preparation for training and evaluation
+- Agent harness and MCP infrastructure
 
-- **High-Scale Web Crawling:**
+## Core Competencies
 
-  Designed and implemented distributed web crawlers handling millions of pages daily, significantly reducing processing time and infrastructure costs.
+{{ skills(label="Languages", items="!🦀 Rust (primary), 🐍 Python, 💩 JavaScript") }}
+{{ skills(label="Rust stack", items="!Axum, !Leptos, Tokio, Tower, Polars") }}
+{{ skills(label="Focus", items="!Agent harness, !MCP servers, web scraping, distributed crawlers, single-view dashboards, data pipelines, REST/gRPC") }}
+{{ skills(label="Cloud & Infra", items="!Kubernetes, Docker, AWS, GCP, Terraform, Nix, GitHub Actions, Prometheus/Grafana") }}
+{{ skills(label="Data Stores", items="PostgreSQL, Redis, MongoDB, !SurrealDB, Qdrant, !Fjall, RocksDB, VictoriaMetrics") }}
+{{ skills(label="Interests", items="Fully Homomorphic Encryption, abstract algebra, natural language processing, context engineering, LLM orchestration, agentic workflows") }}
 
-- **Machine Learning Data Preparation:**
+## Selected Work
 
-  Expertise in collecting, processing, and delivering high-quality datasets
-  for training specialized Large Language Models (LLMs) and AI systems, ensuring
-  accurate and robust performance.
+- **Agent systems and MCP servers.** Build agent harness infrastructure - wiring a
+  model to tools, APIs, and memory - and MCP servers that expose data and tools to
+  agents safely. Example: [exodata.space](https://exodata.space) serves a stateless streamable-HTTP MCP endpoint with read-only catalog query, insight, and export
+  tools ([docs](https://exodata.space/docs/mcp)).
+- **High-scale web crawling.** Distributed crawlers handling millions of pages a day on a small infrastructure footprint, with pipelines that keep the data consistent downstream.
+- **ML dataset preparation.** Collecting, processing, and delivering datasets for
+  training and evaluating language models and other AI systems.
+- **Consulting and mentoring.** Architecture reviews, Rust integration, agent/MCP
+  design, and mentoring on practical AI usage.
 
-- **Price Comparison and Data Aggregation Systems:**
+## Open Source
 
-  Developed automated data extraction and transformation pipelines from numerous sources, continuously maintaining accurate and up-to-date data.
-
-- **Consulting and Mentoring:**
-
-  Provided strategic technical consulting and mentoring, empowering teams
-  to implement best practices, optimize existing solutions, and transition
-  effectively to Rust-based architectures.
-
-**Education**
-
-ITMO University — Information Technology, Optical Design and Engineering (Russia)
-
-**Open Source Projects:**
-
-- [**capp-rs**](https://github.com/oiwn/capp-rs): Modular framework for async web crawlers and data pipelines
-- [**dom-content-extraction**](https://github.com/oiwn/dom-content-extraction): Rust implementation of the Content Extraction via Text Density algorithm
-- [**probabilistic-rs**](https://github.com/oiwn/probabilistic-rs): Probabilistic data structures with persistence
-- [**exoplanets-catalog**](https://github.com/oiwn/exoplanets-catalog): Interactive catalog for NASA Exoplanet Archive, built with Leptos, Axum, and Polars
-- [**pageinfo-rs**](https://github.com/oiwn/pageinfo-rs): Web page analysis tool for AI agents — extracts structure, metadata, and URL patterns
+- [**exodata**](https://github.com/oiwn/exodata): NASA exoplanet catalog (Leptos, Axum, Polars) with a REST API and a hosted MCP endpoint - [exodata.space](https://exodata.space)
+- [**pageinfo-rs**](https://github.com/oiwn/pageinfo-rs): HTTP-only page analysis for LLMs and agents - extracts identity, URL structure, metadata, feeds, and embedded JSON
+- [**capp-rs**](https://github.com/oiwn/capp-rs): Tower-native async runtime for web crawlers and task pipelines - queues, retries, backpressure, and dead-letter handling
+- [**dom-content-extraction**](https://github.com/oiwn/dom-content-extraction): Rust implementation of the Content Extraction via Text Density (CETD) algorithm
+- [**probabilistic-rs**](https://github.com/oiwn/probabilistic-rs): Probabilistic data structures (Bloom / expiring-Bloom filters) with persistence and Python bindings
 - [**tarts**](https://github.com/oiwn/tarts): Terminal screen savers and visual effects in Rust
 
-**GitHub:** [github.com/oiwn](https://github.com/oiwn)
+## Education
 
-**Rates:**
+ITMO University - Information Technology, Optical Design and Engineering (Russia)
 
-- Consulting and Mentoring: \$200/hr
-- Development: \$100/hr
+## Rates
 
+<div class="cv-rates">
+  <div class="cv-rate"><span class="cv-rate-label">Development</span><span class="cv-rate-value">$100/hr</span></div>
+  <div class="cv-rate"><span class="cv-rate-label">Consulting &amp; mentoring</span><span class="cv-rate-value">$200/hr</span></div>
+</div>
+
+## Contact
+
+- **GitHub:** [github.com/oiwn](https://github.com/oiwn)
+- **Email:** {{ email(b64="YWxleC5ncmFibGFiQGljbG91ZC5jb20=") }}

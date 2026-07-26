@@ -1,0 +1,85 @@
+// =============================================================
+//  Palette & effect knobs — single source of truth.
+//
+//  Tune the whole site from here: change a base color and every
+//  glow / gradient tint / border derived from it moves with it.
+//  main.scss only references these tokens; no raw colors live there.
+// =============================================================
+
+// ---- Surfaces ----  (cyberpunk: blue-black base)
+$bg:            #05080e; // page background
+$panel:         #0a1119; // card / row background
+$panel-strong:  #12202b; // card background on hover
+$border:        #16384a; // default hairline border (steel-cyan)
+$border-strong: #2f9fc4; // brighter border (hover / hero top)
+$wash:          #0c2a3a; // soft cyan glow wash behind the header
+$pre-bg:        #050a12; // code block background
+
+// ---- Text ----
+$text:   #d6f2ff; // primary text
+$muted:  #8fb0c2; // body copy / secondary
+$dim:    #5c7488; // meta, timestamps, "repo:" labels
+
+// ---- Accents ----  (cyan primary + amber secondary)
+$accent:        #22e3ff; // primary neon (cyan)
+$accent-hover:  #5cecff; // brighter cyan for hovers
+$accent-2:      #f5a623; // amber — dates, inline code
+$accent-3:      #ffb02e; // secondary neon (amber) — CV button
+$accent-3-hover: #ffc24d; // brighter amber for CV hover
+$danger:        #ff5a4d; // errors / warnings
+
+// ---- Effect knobs ----
+$glow-blur:            0.6rem; // blur radius of the neon glow shadows
+$glow-primary-alpha:   0.5;    // primary (cyan) glow strength
+$glow-secondary-alpha: 0.45;   // secondary (amber) glow strength
+$scanline-color:       #000;   // CRT scanline overlay color
+$scanline-alpha:       0.14;   // per-line darkness
+$scanline-opacity:     0.3;    // overall scanline strength (0 = off)
+
+// ---- Animation knobs ----  (0-out a duration to freeze that layer)
+$sweep-alpha:              0.06; // brightness of the descending scan band
+$sweep-duration:           7s;   // how often the band sweeps down
+$grid-drift-duration:      24s;  // background grid scroll speed
+$scanline-drift-duration:  8s;   // fine-scanline vertical drift speed
+
+// -------------------------------------------------------------
+//  Bridge — publish tokens as CSS custom properties consumed by
+//  Pico and by var() references in main.scss. Custom-property
+//  values must be interpolated (#{}) so Sass evaluates them.
+// -------------------------------------------------------------
+:root {
+  color-scheme: dark;
+
+  --site-bg: #{$bg};
+  --site-panel: #{$panel};
+  --site-panel-strong: #{$panel-strong};
+  --site-border: #{$border};
+  --site-border-strong: #{$border-strong};
+  --site-text: #{$text};
+  --site-muted: #{$muted};
+  --site-dim: #{$dim};
+  --site-accent: #{$accent};
+  --site-accent-2: #{$accent-2};
+  --site-accent-3: #{$accent-3};
+  --site-accent-3-hover: #{$accent-3-hover};
+  --site-danger: #{$danger};
+
+  --glow-primary: 0 0 #{$glow-blur} #{rgba($accent, $glow-primary-alpha)};
+  --glow-secondary: 0 0 #{$glow-blur} #{rgba($accent-3, $glow-secondary-alpha)};
+
+  // Fonts kept as literal CSS (not palette colors); interpolating a Sass
+  // string would strip the quotes around multi-word family names.
+  --pico-font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --pico-font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono",
+    Menlo, monospace;
+  --pico-background-color: var(--site-bg);
+  --pico-color: var(--site-text);
+  --pico-muted-color: var(--site-muted);
+  --pico-primary: var(--site-accent);
+  --pico-primary-hover: #{$accent-hover};
+  --pico-primary-focus: #{rgba($accent, 0.28)};
+  --pico-card-background-color: var(--site-panel);
+  --pico-card-border-color: var(--site-border);
+  --pico-border-radius: 0.35rem;
+}

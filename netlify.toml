@@ -1,0 +1,15 @@
+# Netlify build configuration.
+#
+# Zola's config file is named config.toml, which is ALSO Hugo's classic config
+# filename - so Netlify's framework autodetect flags both Hugo and Zola and
+# prompts for a build command. Declaring the command explicitly here removes
+# that ambiguity (and version-controls the build settings).
+
+[build]
+command = "zola build"
+publish = "public"
+
+[build.environment]
+# Pin the Zola version Netlify installs for git-triggered builds so it matches
+# local. Bump this when you upgrade Zola.
+ZOLA_VERSION = "0.22.1"

@@ -2,20 +2,65 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Data Engineer{% endblock %}</title>
-  <meta name="google-site-verification" content="KGrdXDKiqqHg93kix1ByT2oXJi-axmuq2MzK1CvqglM" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.jade.min.css">
-  <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
-  <!-- Google tag (gtag.js) -->
+
+  <!-- Google tag (gtag.js) - loaded as early as possible per Google's guidance -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSS9YD7MGL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-HSS9YD7MGL');
   </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {%- set cur = current_path | default(value="") -%}
+  {%- set site_name = "oiwn" -%}
+  {%- set site_desc = config.extra.description -%}
+  {%- if page is defined -%}
+    {%- set meta_title = page.title -%}
+    {%- set meta_desc = page.description -%}
+    {%- set meta_url = page.permalink -%}
+  {%- elif section is defined and cur != "/" -%}
+    {%- set meta_title = section.title -%}
+    {%- set meta_desc = section.description -%}
+    {%- set meta_url = section.permalink -%}
+  {%- else -%}
+    {%- set meta_title = "Data Engineer" -%}
+    {%- set meta_desc = site_desc -%}
+    {%- set meta_url = config.base_url -%}
+  {%- endif -%}
+  {%- if not meta_desc -%}{%- set meta_desc = site_desc -%}{%- endif -%}
+  {%- set og_image = get_url(path="imscraping-ninja-og.png") -%}
+
+  <title>{{ meta_title }} - {{ site_name }}</title>
+  <meta name="description" content="{{ meta_desc }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site_name }}">
+  <meta property="og:title" content="{{ meta_title }} - {{ site_name }}">
+  <meta property="og:description" content="{{ meta_desc }}">
+  <meta property="og:url" content="{{ meta_url | safe }}">
+  <meta property="og:image" content="{{ og_image | safe }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta_title }} - {{ site_name }}">
+  <meta name="twitter:description" content="{{ meta_desc }}">
+  <meta name="twitter:image" content="{{ og_image | safe }}">
+
+  <link rel="icon" href="{{ get_url(path="favicon/favicon.ico") | safe }}" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{ get_url(path="favicon/favicon.svg") | safe }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon/favicon-32.png") | safe }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicon/favicon-16.png") | safe }}">
+  <link rel="apple-touch-icon" href="{{ get_url(path="favicon/apple-touch-icon.png") | safe }}">
+  <link rel="manifest" href="{{ get_url(path="favicon/site.webmanifest") | safe }}">
+  <meta name="theme-color" content="#07131c">
+
+  <meta name="google-site-verification" content="KGrdXDKiqqHg93kix1ByT2oXJi-axmuq2MzK1CvqglM" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.jade.min.css">
+  <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
 </head>
 
 <body class="site-shell">
@@ -24,11 +69,12 @@
       <ul class="site-brand">
         <li><a href="{{ get_url(path="/") }}" class="brand-mark">Data Engineer</a></li>
       </ul>
+      {% set cur = current_path | default(value="") %}
       <ul class="site-links">
-        <li><a href="{{ get_url(path="/") }}" class="contrast">Home</a></li>
-        <li><a href="{{ get_url(path="/posts") }}">Notes</a></li>
-        <li><a href="{{ get_url(path="/crypto") }}">Crypto</a></li>
-        <li><a href="{{ get_url(path="/cv") }}" class="nav-cta">CV</a></li>
+        <li><a href="{{ get_url(path="/") }}" class="contrast{% if cur == "/" %} is-active{% endif %}">Home</a></li>
+        <li><a href="{{ get_url(path="/posts") }}"{% if cur is starting_with("/posts") %} class="is-active"{% endif %}>Notes</a></li>
+        <li><a href="{{ get_url(path="/crypto") }}"{% if cur is starting_with("/crypto") %} class="is-active"{% endif %}>Crypto</a></li>
+        <li><a href="{{ get_url(path="/cv") }}" class="nav-cta{% if cur is starting_with("/cv") %} is-active{% endif %}">CV</a></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +84,27 @@
   </main>
 
   <footer class="site-footer container">
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://github.com/oiwn" target="_blank" rel="noopener">
+        <svg class="footer-ico" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+    </nav>
     <small>© oiwn, {{ now() | date(format="%Y") }}</small>
   </footer>
+
+  <script>
+    // Decode base64-obfuscated emails so scrapers only see the encoded blob.
+    (function () {
+      var els = document.querySelectorAll(".email-obf");
+      for (var i = 0; i < els.length; i++) {
+        try {
+          var e = atob(els[i].getAttribute("data-e"));
+          els[i].setAttribute("href", "mailto:" + e);
+          els[i].textContent = e;
+        } catch (x) {}
+      }
+    })();
+  </script>
 </body>
 </html>

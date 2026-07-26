@@ -1,0 +1,1 @@
+<div class="cv-skill-row"><span class="cv-skill-label">{{ label }}</span><span class="cv-chips">{%- for raw in items | split(pat=",") -%}{%- set item = raw | trim -%}{%- if item is starting_with("!") -%}<span class="chip chip-key">{{ item | trim_start_matches(pat="!") | trim }}</span>{%- else -%}<span class="chip">{{ item }}</span>{%- endif -%}{%- endfor -%}</span></div>
